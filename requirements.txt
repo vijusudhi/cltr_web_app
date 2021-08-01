@@ -1,1 +1,13 @@
-
+tqdm==4.48.0
+plotly==5.1.0
+umap_learn==0.4.0rc1
+matplotlib==3.1.2
+googledrivedownloader==0.4
+torch==1.8.1
+nltk==3.6.2
+numpy==1.17.4
+streamlit==0.85.1
+Flask==2.0.1
+sentence_transformers==2.0.0
+pandas==0.25.3
+umap==0.1.1
