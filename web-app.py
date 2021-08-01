@@ -39,8 +39,8 @@ NUM_RETRIEVAL = 5
 PROJ_LINK = '1xP8dWx7y6EZjaZYQJ1PnRNMbAeJNBYJY'
 EN_VECTORS_LINK = '10ktdgB3-BqDWHzIMo468K_QsZQLYESK6'
 DE_VECTORS_LINK = '1wM_bZhFUg1VbaA-6E7OTgi9Bj530x9hE'
-EUROPARL_DATA_LINK = ''
-CONT_MODEL_LINK = ''
+EUROPARL_DATA_LINK = '1KZJrIetQmuoDKZVzwZxvW6lyjaZkEBO7'
+CONT_MODEL_LINK = '1KLx3m_6kDXM3Dss_bgjIRIv0vMKjRBag'
 
 def get_sentence_vector(model, sent):
     sent_vector = model.encode(sent, show_progress_bar=False)
@@ -72,7 +72,9 @@ def load_model():
     
     download_file(file_path=PROJ_PATH, drive_link=PROJ_LINK, unzip=False)
     download_file(file_path=EN_VECTORS_PATH, drive_link=EN_VECTORS_LINK, unzip=False)
-    download_file(file_path=DE_VECTORS_PATH, drive_link=DE_VECTORS_LINK, unzip=False)     
+    download_file(file_path=DE_VECTORS_PATH, drive_link=DE_VECTORS_LINK, unzip=False)
+    download_file(file_path=EUROPARL_DATA_PATH, drive_link=EUROPARL_DATA_LINK, unzip=False)
+    download_file(file_path=CONT_MODEL_PATH, drive_link=CONT_MODEL_LINK, unzip=True)    
 
 load_model()
 
