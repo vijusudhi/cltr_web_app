@@ -66,23 +66,7 @@ def get_retrieved_docs(query):
 
 @st.cache
 def load_model():
-    save_dest = Path('model')
-    save_dest.mkdir(exist_ok=True)
-    
-    def download_file(file_path, drive_link, unzip=False):
-        file = Path(file_path)
-        if not file.exists():
-            with st.spinner("Downloading %s. Please wait..." % file_path):
-                gdd.download_file_from_google_drive(file_id=drive_link,
-                                        dest_path=file_path,
-                                        unzip=unzip)      
-    
-    download_file(file_path=PROJ_PATH, drive_link=PROJ_LINK, unzip=False)
-    download_file(file_path=EN_VECTORS_PATH, drive_link=EN_VECTORS_LINK, unzip=False)
-    download_file(file_path=DE_VECTORS_PATH, drive_link=DE_VECTORS_LINK, unzip=False)
-    download_file(file_path=EUROPARL_DATA_PATH, drive_link=EUROPARL_DATA_LINK, unzip=False)
-    download_file(file_path=CONT_MODEL_PATH, drive_link=CONT_MODEL_LINK, unzip=True)
-    
+
     def get_clusters():
         # Plot UMAP clusters
         df = pd.DataFrame(corpus_en[:5000]+corpus_de[:5000])
