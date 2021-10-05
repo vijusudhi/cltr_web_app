@@ -52,7 +52,7 @@ with st.form(key='my_form'):
     submit_button = st.form_submit_button(label='Submit')
     
     if submit_button:
-        with pd.ExcelWriter('eval.xlsx',
+        with pd.ExcelWriter('\\eval.xlsx',
                             mode='a+') as writer:
             df.at[q_id,'is_relevant'] = is_relevant_opt
             df.at[q_id,'rel_words'] = ', '.join(rel_words_sel)
