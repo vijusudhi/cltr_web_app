@@ -1,1 +1,0 @@
-from tqdm.notebook import tqdm as tq
