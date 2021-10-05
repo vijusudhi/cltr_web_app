@@ -2,6 +2,12 @@ import streamlit as st
 import pandas as pd
 import re
 
+import os
+cwd = os.getcwd()
+
+print('cwd', cwd)
+path = '%s/eval.xlsx' % cwd
+
 
 col1, mid, col2 = st.columns([3,1,20])
 with col1:
@@ -12,7 +18,7 @@ with col2:
     ## Evaluation """)
     
 
-df = pd.read_excel('eval.xlsx', sheet_name='eval', index_col=0)
+df = pd.read_excel(path, sheet_name='eval', index_col=0)
 df['rel_words'] = df['rel_words'].astype(str)
 print(df.keys())
 
@@ -52,7 +58,7 @@ with st.form(key='my_form'):
     submit_button = st.form_submit_button(label='Submit')
     
     if submit_button:
-        with pd.ExcelWriter('\\eval.xlsx',
+        with pd.ExcelWriter(path,
                             mode='a+') as writer:
             df.at[q_id,'is_relevant'] = is_relevant_opt
             df.at[q_id,'rel_words'] = ', '.join(rel_words_sel)
