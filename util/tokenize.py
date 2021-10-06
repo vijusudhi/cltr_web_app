@@ -2,6 +2,7 @@ import string
 import nltk
 import re
 nltk.download('stopwords')
+nltk.download('punkt')
 from nltk.corpus import stopwords
 
 # define stop words for EN and DE
