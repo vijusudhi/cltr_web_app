@@ -2,8 +2,6 @@ import streamlit as st
 import pandas as pd
 import re
 from github import Github
-github = Github('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')
-repository = github.get_user().get_repo('cltr_web_app')
 
 import sys
 sys.path.append('../')
@@ -31,11 +29,22 @@ st.write("## **Evaluation of explanations**")
 
 
 username = st.text_input('Please enter your username', '')
+password = st.text_input('Please enter your password', '')
+
+if not username or not password:
+    st.stop()
+    
+github = Github('%s'%password.strip())
+try:
+    repository = github.get_user().get_repo('cltr_web_app')
+except:
+    st.error('Wrong password. Please try again!')
+print(repository)
+
 filename = '%s_log.csv' % username
 log_files = [file.name for file in repository.get_contents("logs")]
 filepath = 'logs/%s' %filename
-if not username:
-    st.stop()                
+                
 if filename not in log_files:
     data = 'q_id, query, document, is_relevant, rel_words'
     f = repository.create_file(filepath, "User %s pushing via PyGithub" %username, data)
