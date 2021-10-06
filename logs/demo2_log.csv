@@ -1,2 +1,1 @@
-{id, query, doc, is_rel, rel_words}
-{id, query, doc, is_rel, rel_words}
+id, query, doc, is_rel, rel_words
