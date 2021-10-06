@@ -2,12 +2,10 @@ import streamlit as st
 import pandas as pd
 import re
 import json
+from pathlib import Path
 
 import os
 cwd = os.getcwd()
-
-print('cwd', cwd)
-path = '%s/eval.xlsx' % cwd
 
 @st.cache(allow_output_mutation=True)
 def load_df():
@@ -21,12 +19,6 @@ def convert_df(df):
     # IMPORTANT: Cache the conversion to prevent computation on every rerun
     return df.to_csv(index=False, header=False).encode('utf-8')
 
-inp, inp_qids = load_df()
-log = pd.read_csv('log.csv', header=None, 
-                  names=['q_id', 'query_text', 'document', 'is_relevant', 'rel_words'])
-log_qids = log.q_id.to_list()
-to_do = [qid for qid in inp_qids if qid not in log_qids]
-
 col1, mid, col2 = st.columns([3,1,20])
 with col1:
     st.image('multilingual-icon-9.jpg', width=100)
@@ -35,6 +27,23 @@ with col2:
     # Explainable Cross-lingual Text Retrieval on Automotive domain
     """)
 st.write("## **Evaluation of explanations**")
+
+
+username = st.text_input('Please enter your username', '')
+if not username:
+    st.stop()
+path = '%s/%s_log.csv' % (cwd, username)
+log_file = Path(path)
+if not log_file.exists():
+    data = {}
+    data = pd.DataFrame(data)
+    data.to_csv(path, mode='a+', index=False, header=False)
+
+inp, inp_qids = load_df()
+log = pd.read_csv(path, header=None, 
+                  names=['q_id', 'query_text', 'document', 'is_relevant', 'rel_words'])
+log_qids = log.q_id.to_list()
+to_do = [qid for qid in inp_qids if qid not in log_qids]
 
 if len(to_do) >= 1:
     q_id = to_do[0]
@@ -47,7 +56,6 @@ else:
         file_name='evaluation.csv',
     )      
     st.stop()
-    
 
 curr_df = inp[inp['q_id'] == q_id]  
 
@@ -90,11 +98,10 @@ with st.form(key='my_form'):
         data['is_relevant'] = is_relevant_opt
         data['rel_words'] = [', '.join(rel_words_sel)]
         data = pd.DataFrame(data)
-        
-        data.to_csv('log.csv', mode='a+', index=False, header=False)
+        data.to_csv(path, mode='a+', index=False, header=False)
         
 st.download_button(
     label="Download data as CSV",
     data=convert_df(log),
-    file_name='evaluation.csv',
+    file_name='%s_evaluation.csv'%username,
 )  
