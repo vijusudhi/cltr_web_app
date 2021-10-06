@@ -32,6 +32,7 @@ username = st.text_input('Please enter your username', '')
 password = st.text_input('Please enter your password', '')
 
 if not username or not password:
+    st.info('You have not enetered a username and/or password')
     st.stop()
     
 github = Github('%s'%password.strip())
