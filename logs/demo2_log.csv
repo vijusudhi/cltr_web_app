@@ -1,2 +1,1 @@
-b'b\'{}\'\n        {"q_id":"ST",         "query_text":"query_text",         "document":"document",         "is_relevant":"is_relevant_opt",         "rel_words":"r, e, l, _, w, o, r, d, s, _, s, e, l",\\}'
-        {"q_id":"ST22",         "query_text":"query_text",         "document":"document",         "is_relevant":"is_relevant_opt",         "rel_words":"r, e, l, _, w, o, r, d, s, _, s, e, l",\}
+{id, query, doc, is_rel, rel_words}
