@@ -1,0 +1,4 @@
+id, query, doc, is_rel, rel_words
+id002, query1, doc1, yes, all
+id002, query1, doc1, yes, \[hi, all\]
+id002, query1, doc1, yes, (hi, all)
