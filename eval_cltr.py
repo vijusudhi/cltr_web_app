@@ -1,11 +1,13 @@
 import streamlit as st
 import pandas as pd
 import re
-import json
-from pathlib import Path
+from github import Github
+github = Github('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')
+repository = github.get_user().get_repo('cltr_web_app')
 
-import os
-cwd = os.getcwd()
+import sys
+sys.path.append('../')
+from util import tokenize
 
 @st.cache(allow_output_mutation=True)
 def load_df():
@@ -16,7 +18,6 @@ def load_df():
 
 @st.cache
 def convert_df(df):
-    # IMPORTANT: Cache the conversion to prevent computation on every rerun
     return df.to_csv(index=False, header=False).encode('utf-8')
 
 col1, mid, col2 = st.columns([3,1,20])
@@ -30,19 +31,19 @@ st.write("## **Evaluation of explanations**")
 
 
 username = st.text_input('Please enter your username', '')
+filename = '%s_log.csv' % username
+log_files = [file.name for file in repository.get_contents("logs")]
+filepath = 'logs/%s' %filename
 if not username:
-    st.stop()
-path = '%s/%s_log.csv' % (cwd, username)
-log_file = Path(path)
-if not log_file.exists():
-    data = {}
-    data = pd.DataFrame(data)
-    data.to_csv(path, mode='a+', index=False, header=False)
+    st.stop()                
+if filename not in log_files:
+    data = 'q_id, query, document, is_relevant, rel_words'
+    f = repository.create_file(filepath, "User %s pushing via PyGithub" %username, data)
 
 inp, inp_qids = load_df()
-log = pd.read_csv(path, header=None, 
-                  names=['q_id', 'query_text', 'document', 'is_relevant', 'rel_words'])
-log_qids = log.q_id.to_list()
+file = repository.get_contents(filepath)
+lines = file.decoded_content.decode()
+log_qids = [line.split(',')[0] for line in lines.split('\n')]
 to_do = [qid for qid in inp_qids if qid not in log_qids]
 
 if len(to_do) >= 1:
@@ -50,11 +51,11 @@ if len(to_do) >= 1:
 else:
     st.balloons()
     st.write('You have evaluated all the documents. Thanks for your time! :smile:')
-    st.download_button(
-        label="Download data as CSV",
-        data=convert_df(log),
-        file_name='evaluation.csv',
-    )      
+    # st.download_button(
+    #     label="Download data as CSV",
+    #     data=convert_df(log),
+    #     file_name=filename,
+    # )      
     st.stop()
 
 curr_df = inp[inp['q_id'] == q_id]  
@@ -75,33 +76,31 @@ with st.form(key='my_form'):
         "Do you think this document is relevant?",
         ('Yes', 'No'))  
 
-    doc = document.lower()
-    doc = re.sub(r'[!"#$%&\()*+/<=>?@\[\\\\\]^_`{|}~-]', '', doc)
-    doc = re.sub(r'\.', '', doc)
-    doc = re.sub("'", '', doc)
-    words = []
-    for word in doc.split(' '):
-        if word and word not in words:
-            words.append(word)
+    words = tokenize.get_tokens(document, lang='en')
+    
     rel_words_sel = st.multiselect(
-        'Pick the relevant words',
-        words,
-        words)
+        'Remove the irrelevant words',
+        words, words)
     
     submit_button = st.form_submit_button(label='Submit')
     
     if submit_button:        
-        data = {}
-        data['q_id'] = q_id
-        data['query_text'] = query_text
-        data['document'] = document
-        data['is_relevant'] = is_relevant_opt
-        data['rel_words'] = [', '.join(rel_words_sel)]
-        data = pd.DataFrame(data)
-        data.to_csv(path, mode='a+', index=False, header=False)
+        file = repository.get_contents(filepath)
+        prev_data = file.decoded_content.decode()
+        data = '%s\n%s, %s, %s, %s, %s'\
+                %(prev_data,
+                  q_id,
+                  query_text,
+                  document,
+                  is_relevant_opt,
+                  ': '.join(rel_words_sel)
+                 )
+        f = repository.update_file(filepath, 
+                                   "User %s updating via PyGithub" %username, 
+                                   data, sha=file.sha)         
         
-st.download_button(
-    label="Download data as CSV",
-    data=convert_df(log),
-    file_name='%s_evaluation.csv'%username,
-)  
+# st.download_button(
+#     label="Download data as CSV",
+#     data=convert_df(log),
+#     file_name='%s_evaluation.csv'%username,
+# )  
