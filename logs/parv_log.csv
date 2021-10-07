@@ -1,2 +1,3 @@
 q_id, query, document, is_relevant, rel_words
 ST_001,  adaptive cruise control,  The adaptive cruise control adapts the vehicle’s speed to the flow of traffic., No, adaptive: cruise: control
+CT_001,  adaptive cruise control,  The adaptive cruise control ACC helps to adapt the speed in heavy traffic to the flow to keep a safe distance to the preceding vehicle., No, adaptive: cruise: control: acc: helps: flow: keep: safe
