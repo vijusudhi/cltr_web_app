@@ -77,20 +77,23 @@ else:
 
 curr_df = inp[inp['q_id'] == q_id]  
 
-def update(is_relevant_opt, rel_words_sel):
-    file = repository.get_contents(filepath)
-    prev_data = file.decoded_content.decode()
-    data = '%s\n%s, %s, %s, %s, %s'\
-            %(prev_data,
-              q_id,
-              query_text,
-              document,
-              is_relevant_opt,
-              ': '.join(rel_words_sel)
-             )
-    f = repository.update_file(filepath, 
-                               "User %s updating via PyGithub" %username, 
-                                data, sha=file.sha)
+def update(is_relevant_opt, rel_words_sel, submit_button):
+    if not submit_button:
+        st.warning('Click Submit to submit your changes and then click Next!')
+    else:
+        file = repository.get_contents(filepath)
+        prev_data = file.decoded_content.decode()
+        data = '%s\n%s, %s, %s, %s, %s'\
+                %(prev_data,
+                  q_id,
+                  query_text,
+                  document,
+                  is_relevant_opt,
+                  ': '.join(rel_words_sel)
+                 )
+        f = repository.update_file(filepath, 
+                                   "User %s updating via PyGithub" %username, 
+                                    data, sha=file.sha)
 
 my_bar = st.progress(0)
 with st.form(key='my_form'):    
@@ -118,9 +121,11 @@ with st.form(key='my_form'):
     submit_button = st.form_submit_button(label='Submit', help='Click to submit your changes')
     
 col1, col2 = st.columns([30,5])
-btn_next = col2.button(label='Next',
-                     help='Click to proceed to next query',
-                     on_click=update, 
-                     args=(is_relevant_opt, rel_words_sel,)
-                    )
+if submit_button:
+    btn_next = col2.button(label='Next',
+                         help='Click to proceed to next query',
+                         on_click=update, 
+                         args=(is_relevant_opt, rel_words_sel, submit_button)
+                        )
+
 my_bar.progress((len(log_qids)-1)/len(inp_qids))
