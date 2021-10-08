@@ -28,24 +28,31 @@ with col2:
 st.write("## **Evaluation of explanations**")
 
 
-username = st.text_input('Please enter your username', '')
-password = st.text_input('Please enter your password', '')
+st.sidebar.write('# **Login**')
+st.sidebar.write('Please enter your credentials and click **Enter**.')
+username = st.sidebar.text_input('Username', '', 
+                                 help="Enter a unique name. You may use your first name.")
+password = st.sidebar.text_input('Password', '', type="password", 
+                                 help="Enter the password in the email")
 
 if not username or not password:
-    st.info('You have not enetered a username and/or password')
+    st.sidebar.info('You have not enetered a username and/or password')
     st.stop()
-    
+
 github = Github('%s'%password.strip())
 try:
     repository = github.get_user().get_repo('cltr_web_app')
+    st.sidebar.success('Login successful!')
 except:
-    st.error('Wrong password. Please try again!')
-print(repository)
+    st.sidebar.error('Wrong password. Please try again!')
+    st.stop()    
+
+
 
 filename = '%s_log.csv' % username
 log_files = [file.name for file in repository.get_contents("logs")]
 filepath = 'logs/%s' %filename
-                
+
 if filename not in log_files:
     data = 'q_id, query, document, is_relevant, rel_words'
     f = repository.create_file(filepath, "User %s pushing via PyGithub" %username, data)
@@ -70,47 +77,50 @@ else:
 
 curr_df = inp[inp['q_id'] == q_id]  
 
+def update(is_relevant_opt, rel_words_sel):
+    file = repository.get_contents(filepath)
+    prev_data = file.decoded_content.decode()
+    data = '%s\n%s, %s, %s, %s, %s'\
+            %(prev_data,
+              q_id,
+              query_text,
+              document,
+              is_relevant_opt,
+              ': '.join(rel_words_sel)
+             )
+    f = repository.update_file(filepath, 
+                               "User %s updating via PyGithub" %username, 
+                                data, sha=file.sha)
+
+my_bar = st.progress(0)
 with st.form(key='my_form'):    
     col1, col2 = st.columns([4,20])
     query_text = curr_df.query_text.values[0]
     document = curr_df.document.values[0]
-    
+
     col1.write('**ID**')
     col2.write(q_id)    
     col1.write('**Query**')
     col2.write(query_text)
     col1.write('**Document**')
     col2.write(document)
-    
+
     is_relevant_opt = st.radio(
         "Do you think this document is relevant?",
         ('Yes', 'No'))  
 
     words = tokenize.get_tokens(document, lang='en')
-    
+
     rel_words_sel = st.multiselect(
-        'Remove the irrelevant words',
+        'Remove the irrelevant words.',
         words, words)
     
-    submit_button = st.form_submit_button(label='Submit')
+    submit_button = st.form_submit_button(label='Submit', help='Click to submit your changes')
     
-    if submit_button:        
-        file = repository.get_contents(filepath)
-        prev_data = file.decoded_content.decode()
-        data = '%s\n%s, %s, %s, %s, %s'\
-                %(prev_data,
-                  q_id,
-                  query_text,
-                  document,
-                  is_relevant_opt,
-                  ': '.join(rel_words_sel)
-                 )
-        f = repository.update_file(filepath, 
-                                   "User %s updating via PyGithub" %username, 
-                                   data, sha=file.sha)         
-        
-# st.download_button(
-#     label="Download data as CSV",
-#     data=convert_df(log),
-#     file_name='%s_evaluation.csv'%username,
-# )  
+col1, col2 = st.columns([30,5])
+btn_next = col2.button(label='Next',
+                     help='Click to proceed to next query',
+                     on_click=update, 
+                     args=(is_relevant_opt, rel_words_sel,)
+                    )
+my_bar.progress((len(log_qids)-1)/len(inp_qids))
