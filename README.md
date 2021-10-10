@@ -33,7 +33,7 @@ This brings us down to the topic of this thesis- an Explainable Cross-Lingual Te
 ### Plan 
 
 <p align="center">
-  <img src="plan.png">
+  <img height="400" src="plan.png">
 </p>
 
 ### Phase 1 Evaluation
