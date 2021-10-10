@@ -1,6 +1,8 @@
 Have you ever searched for *notbremsassistent* in a regular search engine and felt you still missed out search results just because you searched in German? Wouldn't you expect better and relevant results in other languages, as well? 
 
 To motivate further, check what Google gives as search results for the same query (though in different languages). Do note the number of search results and the language of results retrieved. 
+
+:-------------------------:|:-------------------------:
 ![Search result for *automatic emergency braking* in Google](en_result.png) |  ![Search result for *notbremsassistent* in Google](de_result.png)
 :-------------------------:|:-------------------------:
 
