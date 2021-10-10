@@ -26,7 +26,7 @@ Read more about the digital language divide [here](http://labs.theguardian.com/d
 
 <img align="right" width="100" height="80" src="explainable.png">
 
-How many times have you wondered why you got a particular search result when you typed in a specific query? Was the reason ever clear - similarity in the topic, common words or something more abstract that contributed to the search result? As a user in this digital age, you are entitled with the *right to obtain an explanation*, provided the decision has been made by an automated decision maker. This prompts the search engines to not just give you the search results but also reason why those results were returned.
+How often have you wondered why you got a particular search result in the top when you typed in a specific query? Was the reason ever clear - similarity in the topic, common words or something more abstract that would have contributed to the search result? As a user in this digital age, you are entitled with the *right to obtain an explanation*, provided the decision has been made by an automated decision maker. This prompts the search engines to not just give you the search results but also reason why those results were returned.
 
 Read more about Recital 71 from EU GDPR [here](https://www.privacy-regulation.eu/en/recital-71-GDPR.htm).
 
