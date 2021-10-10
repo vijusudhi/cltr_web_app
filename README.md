@@ -10,7 +10,7 @@ Does such a language-restricted search do justice to your comprehensive informat
 
 ## Why do I need a CLTR system?
 
-<img align="left" width="100" height="90" src="multilingual-icon-9.jpg">
+<img align="left" width="90" height="90" src="multilingual-icon-9.jpg">
 
 Cross-lingual Text retrieval system (or, CLTR) system retrieves results transcending the boundary of language. Don't you think this is what we need in this age of booming information where Internet should not be *just as big as the language you speak*. Read more about the digital language divide [here](http://labs.theguardian.com/digital-language-divide/). 
 
