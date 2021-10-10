@@ -3,11 +3,11 @@ Have you ever searched for *notbremsassistent* in a regular search engine and fe
 To motivate further, check what Google gives as search results for the same query (though in different languages). Do note the number of search results and the language of results retrieved. 
 
 
-<img align="left" height="300" src="en_result.png">
 
-<img align="right" height="300" src="en_result.png">
-
-`(space)`
+<table><tr>
+<td> <img src="en_result.png" alt="" style="width: 300;"/> </td>
+<td> <img src="de_result.png" alt="" style="width: 300;"/> </td>
+</tr></table>
 
 Does such a language-restricted search do justice to your comprehensive information need?
 
