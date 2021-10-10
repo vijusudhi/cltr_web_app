@@ -2,6 +2,9 @@ Have you ever searched for *notbremsassistent* in a regular search engine and fe
 
 To motivate further, check what Google gives as search results for the same query (though in different languages). Do note the number of search results and the language of results retrieved. 
 
+> "If it weren't for my lawyer, I'd still be in prison.
+>  It went a lot faster with two people digging."
+
 
 
 <table><tr>
