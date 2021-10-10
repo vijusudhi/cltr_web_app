@@ -3,10 +3,8 @@
 
 To motivate further, check what Google gives as search results for the same query (though in different languages). You may note the number of search results and the language of results retrieved and try to answer the question that follows. 
 
-<p align="center">
-  <img height="400" src="en_result.png">
-  <img height="400" src="de_result.png">
-</p>
+![img](en_result.png)
+![img](de_result.png)
 
 
 #### Do these search results (individually) satiate your comprehensive information need?
