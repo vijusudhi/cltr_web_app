@@ -1,4 +1,4 @@
-## Explainable Cross-Lingual Text Retrieval on Automotive domain
+% ## Explainable Cross-Lingual Text Retrieval on Automotive domain
 
 Have you ever searched for *notbremsassistent* in a regular search engine and felt you still missed out search results just because you searched in German? Wouldn't you expect better and relevant results in other languages, as well? 
 
