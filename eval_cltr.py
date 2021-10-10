@@ -15,6 +15,13 @@ def load_df(group):
     inp_qids = inp.q_id.to_list()
     return inp, inp_qids
 
+@st.cache(allow_output_mutation=True)
+def load_users():
+    users = pd.read_csv('users.csv', header=None, 
+            names=['user', 'group'],
+            delimiter=',')
+    return users
+
 @st.cache
 def convert_df(df):
     return df.to_csv(index=False, header=False).encode('utf-8')
@@ -51,15 +58,23 @@ username = st.sidebar.text_input('Username', '',
                                  help="Enter a unique name. You may use your first name.")
 password = st.sidebar.text_input('Password', '', type="password", 
                                  help="Enter the password as in the email.")
-group = st.sidebar.radio('Group', 
-                            options=('A', 'B'),
-                        help="Select the group as in the email.")
-group = group.lower()
+# group = st.sidebar.radio('Group', 
+#                             options=('A', 'B'),
+#                         help="Select the group as in the email.")
 
-if not username or not password or not group:
-    st.sidebar.info('Missing one or more of: username, password, group')
+users_df = load_users()
+
+if not username or not password:
+    st.sidebar.info('You have not entered username and/or password')
     st.sidebar.write('In case of any technical troubles, please drop a mail at viju.sudhi@audi.de')
     st.stop()
+
+if username not in users_df.user.to_list():
+    st.sidebar.error('Incorrect username. Please check your email.')
+    st.sidebar.write('In case of any technical troubles, please drop a mail at viju.sudhi@audi.de')
+    st.stop()
+
+group = users_df[users_df['user'] == username].group.values[0]
 
 github = Github('%s'%password.strip())
 try:
@@ -74,7 +89,7 @@ except:
 
 filename = '%s_log.csv' % username
 log_files = [file.name for file in repository.get_contents("logs")]
-filepath = 'logs/%s' %filename
+filepath = 'logs/%s' % filename
 
 if filename not in log_files:
     data = 'q_id, query, document, is_relevant, rel_words'
