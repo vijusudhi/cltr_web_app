@@ -15,18 +15,22 @@ Does such a language-restricted search do justice to your comprehensive informat
 
 <img align="right" width="90" height="90" src="multilingual-icon-9.jpg">
 
-Cross-lingual Text retrieval system (or, CLTR) system retrieves results transcending the boundary of language. Don't you think this is what we need in this age of booming information where Internet should not be *just as big as the language you speak*. Read more about the digital language divide [here](http://labs.theguardian.com/digital-language-divide/). 
+Cross-lingual Text retrieval system (or, CLTR) system retrieves results transcending the boundary of language. Don't you think this is what we need in this age of booming information where Internet should not be *just as big as the language you speak*. 
+
+Read more about the digital language divide [here](http://labs.theguardian.com/digital-language-divide/). 
 
 
 ## Why do I need an Explainable system?
 
 <img align="right" width="100" height="80" src="explainable.png">
 
-How many times have you wondered why you are presented a search result when you searched for a particular query? Was it because of the similarity in the topic, common words or something more abstract? As y user, you are entitled with the *right to obtain an explanation made by an automated decision maker*. Read more about Recital 71 from EU GDPR [here](https://www.privacy-regulation.eu/en/recital-71-GDPR.htm).
+How many times have you wondered why you are presented a search result when you searched for a particular query? Was it because of the similarity in the topic, common words or something more abstract? As y user, you are entitled with the *right to obtain an explanation made by an automated decision maker*. 
 
-This brings us down to the topic of this thesis- an Explainable Cross-Lingual Text Retrieval on Automotive domain.
+Read more about Recital 71 from EU GDPR [here](https://www.privacy-regulation.eu/en/recital-71-GDPR.htm).
 
 ## Let's talk about the thesis..
+
+This brings us down to the topic of this thesis- an Explainable Cross-Lingual Text Retrieval on Automotive domain.
 
 ### Goal
 
