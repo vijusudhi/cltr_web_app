@@ -1,14 +1,14 @@
-#### Have you ever searched for *notbremsassistent* in a regular search engine and felt you still missed out search results just because you searched in German? Wouldn't you expect better and relevant results in other languages, as well? 
+#### Have you ever searched for *notbremsassistent* in a regular search engine and felt you still missed out search results just because you searched in German? Wouldn't you expect better and relevant results from other languages, as well? 
 
 
-To motivate further, check what Google gives as search results for the same query (though in different languages). Do note the number of search results and the language of results retrieved. 
+To motivate further, check what Google gives as search results for the same query (though in different languages). You may note the number of search results and the language of results retrieved and try to answer the question that follows. 
 
 <table><tr>
 <td> <img src="en_result.png" alt="" style="width: 300;"/> </td>
 <td> <img src="de_result.png" alt="" style="width: 300;"/> </td>
 </tr></table>
 
-Does such a language-restricted search do justice to your comprehensive information need?
+> Does such a language-restricted search do justice to your comprehensive information need?
 
 ## Why do I need a CLTR system?
 
