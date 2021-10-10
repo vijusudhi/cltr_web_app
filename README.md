@@ -1,37 +1,43 @@
 ## Explainable Cross-Lingual Text Retrieval on Automotive domain
 
-You can use the [editor on GitHub](https://github.com/vijusudhi/cltr_web_app/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Have you ever searched for *notbremsassistent* in a regular search engine and felt you still missed out search results just because you searched in German? Wouldn't you expect better and relevant results in other languages, as well? 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+To motivate further, check what Google gives as search results for the same query (though in different languages). Do note the number of search results and the language of results retrieved. 
+![Search result for *automatic emergency braking* in Google](https://user-images.githubusercontent.com/49450871/136711521-4bd2416d-90a1-42e3-a99b-6bb8efa91fbf.png) |  ![Search result for *notbremsassistent* in Google](https://user-images.githubusercontent.com/49450871/136711544-bb80b447-faa3-4f68-89a5-93459b60c75f.png)
+:-------------------------:|:-------------------------:
 
-### Markdown
+Does such a language-restricted search do justice to your comprehensive information need?
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Why do I need a CLTR system?
 
-```markdown
-Syntax highlighted code block
+<img align="left" width="100" height="90" src="multilingual-icon-9.jpg">
 
-# Header 1
-## Header 2
-### Header 3
+Cross-lingual Text retrieval system (or, CLTR) system retrieves results transcending the boundary of language. Don't you think this is what we need in this age of booming information where Internet should not be *just as big as the language you speak*. Read more about the digital language divide [here](http://labs.theguardian.com/digital-language-divide/). 
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+## Why do I need an Explainable system?
 
-**Bold** and _Italic_ and `Code` text
+<img align="right" width="100" height="80" src="explainable.png">
 
-[Link](url) and ![Image](src)
-```
+How many times have you wondered why you are presented a search result when you searched for a particular query? Was it because of the similarity in the topic, common words or something more abstract? As y user, you are entitled with the *right to obtain an explanation made by an automated decision maker*. Read more about Recital 71 from EU GDPR [here](https://www.privacy-regulation.eu/en/recital-71-GDPR.htm).
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+This brings us down to the topic of this thesis- an Explainable Cross-Lingual Text Retrieval on Automotive domain.
 
-### Jekyll Themes
+## Let's talk about the thesis..
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/vijusudhi/cltr_web_app/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Goal
 
-### Support or Contact
+- Aims at developing an explainable CLTR with a combination of model-agnostic and corpus-exploratiry methods.
+- Evisages a transition from generic keyword based search to domain-specific semantic search aided by dense (static - word2vec, fastText and contextual - Sentence-BERT, mBERT) text representaions.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### Plan 
+
+<p align="center">
+  <img src="plan.png">
+</p>
+
+### Phase 1 Evaluation
+
+This phase intends to evaluate the following.
+- How good are the explanations the system present in comparison with the human judgement?
+- Are the results better when a static embedding model is used or a contextual model is used?
