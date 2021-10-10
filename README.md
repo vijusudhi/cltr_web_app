@@ -1,9 +1,7 @@
-% ## Explainable Cross-Lingual Text Retrieval on Automotive domain
-
 Have you ever searched for *notbremsassistent* in a regular search engine and felt you still missed out search results just because you searched in German? Wouldn't you expect better and relevant results in other languages, as well? 
 
 To motivate further, check what Google gives as search results for the same query (though in different languages). Do note the number of search results and the language of results retrieved. 
-![Search result for *automatic emergency braking* in Google](https://user-images.githubusercontent.com/49450871/136711521-4bd2416d-90a1-42e3-a99b-6bb8efa91fbf.png) |  ![Search result for *notbremsassistent* in Google](https://user-images.githubusercontent.com/49450871/136711544-bb80b447-faa3-4f68-89a5-93459b60c75f.png)
+![Search result for *automatic emergency braking* in Google](en_result.png) |  ![Search result for *notbremsassistent* in Google](de_result.png)
 :-------------------------:|:-------------------------:
 
 Does such a language-restricted search do justice to your comprehensive information need?
