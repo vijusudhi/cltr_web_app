@@ -1,11 +1,9 @@
-Have you ever searched for *notbremsassistent* in a regular search engine and felt you still missed out search results just because you searched in German? Wouldn't you expect better and relevant results in other languages, as well? 
+> Have you ever searched for *notbremsassistent* in a regular search engine and 
+> felt you still missed out search results just because you searched in German? 
+> Wouldn't you expect better and relevant results in other languages, as well? 
+
 
 To motivate further, check what Google gives as search results for the same query (though in different languages). Do note the number of search results and the language of results retrieved. 
-
-> "If it weren't for my lawyer, I'd still be in prison.
->  It went a lot faster with two people digging."
-
-
 
 <table><tr>
 <td> <img src="en_result.png" alt="" style="width: 300;"/> </td>
