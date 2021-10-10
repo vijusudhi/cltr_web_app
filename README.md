@@ -1,6 +1,6 @@
-#### Have you ever searched for notbremsassistent in a regular search engine and felt you still missed out search results just because you searched in German? Wouldn't you expect better and relevant results from other languages, as well? 
+#### Have you ever searched for notbremsassistent in a regular search engine and felt you still missed out search results just because you searched in German? Wouldn't you expect better and relevant results from other languages, as well?
 
----
+----
 
 
 To motivate further, check what Google gives as search results for the same query (though in different languages). You may note the number of search results and the language of results and try to answer the question that follows. 
