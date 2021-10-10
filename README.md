@@ -2,9 +2,12 @@ Have you ever searched for *notbremsassistent* in a regular search engine and fe
 
 To motivate further, check what Google gives as search results for the same query (though in different languages). Do note the number of search results and the language of results retrieved. 
 
-:-------------------------:|:-------------------------:
-![Search result for *automatic emergency braking* in Google](en_result.png) |  ![Search result for *notbremsassistent* in Google](de_result.png)
-:-------------------------:|:-------------------------:
+
+<img align="left" height="300" src="en_result.png">
+
+<img align="right" height="300" src="en_result.png">
+
+`(space)`
 
 Does such a language-restricted search do justice to your comprehensive information need?
 
