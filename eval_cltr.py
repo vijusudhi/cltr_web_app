@@ -38,11 +38,10 @@ st.write("## **Phase I Evaluation**")
 def update(is_relevant_opt, rel_words_sel, submit_button):
     file = repository.get_contents(filepath)
     prev_data = file.decoded_content.decode()
-    data = '%s\n%s, %s, %s, %s, %s'\
+    data = '%s\n%s, %s, %s, %s'\
             %(prev_data,
               q_id,
               query_text,
-              document,
               is_relevant_opt,
               ': '.join(rel_words_sel)
              )
@@ -89,7 +88,7 @@ log_files = [file.name for file in repository.get_contents("logs")]
 filepath = 'logs/%s' % filename
 
 if filename not in log_files:
-    data = 'q_id, query, document, is_relevant, rel_words'
+    data = 'q_id, query, is_relevant, rel_words'
     f = repository.create_file(filepath, "User %s pushing via PyGithub" %username, data)
 
 inp, inp_qids = load_df(group)
