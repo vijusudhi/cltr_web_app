@@ -54,7 +54,7 @@ st.sidebar.write('You are at the Phase I Evaluation of the Master thesis on **Ex
 st.sidebar.write('# **Login**')
 st.sidebar.write('Please enter your credentials and click **Enter**.')
 username = st.sidebar.text_input('Username', '', 
-                                 help="Enter a unique name. You may use your first name.")
+                                 help="Enter the username as in the email.")
 password = st.sidebar.text_input('Password', '', type="password", 
                                  help="Enter the password as in the email.")
 
@@ -78,7 +78,7 @@ try:
     st.sidebar.success('Login successful!')
     st.sidebar.write('In case of any technical troubles, please drop a mail at viju.sudhi@audi.de')
 except:
-    st.sidebar.error('Wrong password. Please try again!')
+    st.sidebar.error('Incorrect username. Please check your email.')
     st.sidebar.write('In case of any technical troubles, please drop a mail at viju.sudhi@audi.de')
     st.stop()    
 
@@ -131,10 +131,10 @@ with st.form(key='my_form'):
     col2.write(document)
 
     is_relevant_opt = st.radio(
-        label="Do you think this result should be returned when you search the query?",
+        label="Do you think this result should be returned when you search the given query?",
         options=('Yes', 'No'),
-        help='Please read the search query and the result document. \
-        Select "Yes" if you think the document talks about the query and \
+        help='Please read the search query and the search result. \
+        Select "Yes" if you think the result talks about the query and \
         should be returned while a user searches for this query. \
         Select "No" otherwise.')
     
@@ -142,11 +142,12 @@ with st.form(key='my_form'):
     words = tokenize.get_tokens(document, lang=curr_df.lang.values[0])
 
     rel_words_sel = st.multiselect(
-        label='Keep only the most relevant words.',
-        help='The following words are from the result document. The system \
-        returned this document when the particular query was searched because \
-        of similar words in the query and the document. In the list, keep only \
-        the most important words. Remove irrelevant words.', \
+        label='Keep only the words you think are the most relevant while considering the given query.',
+        help='The following words are from the search result. The system \
+        could have returned this result because \
+        of similar words in the query and the result document. \
+        From the list of words below, remove irrelevant words and \
+        retain only the most relevant words.', \
         options=words, default=words)
     
     submit_button = st.form_submit_button(label='Submit', 
@@ -166,7 +167,7 @@ if submit_button:
     else:
         st.info('Your changes are submitted. Click Next to continue.')
         btn_next = st.button(label='Next',
-                             help='Click to proceed to next query',
+                             help='Click to proceed to next query.',
                              on_click=update, 
                              args=(is_relevant_opt, rel_words_sel, submit_button)
                                     )  
