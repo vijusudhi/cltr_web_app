@@ -11,11 +11,11 @@ from util import tokenize
 def load_df(group):
     inp = pd.read_csv('eval/group_%s_eval.csv' % group, header=None, 
                   names=['q_id', 'query_text', 'document', 'lang'],
-                  delimiter=';')
+                  delimiter=',')
     inp_qids = inp.q_id.to_list()
     return inp, inp_qids
 
-@st.cache(allow_output_mutation=True)
+# @st.cache(allow_output_mutation=True)
 def load_users():
     users = pd.read_csv('users.csv', header=None, 
             names=['user', 'group'],
@@ -28,7 +28,7 @@ def convert_df(df):
 
 col1, mid, col2 = st.columns([3,1,20])
 with col1:
-    st.image('multilingual-icon-9.jpg', width=100)
+    st.image('images/multilingual-icon-9.jpg', width=100)
 with col2:
     st.write("""
     # Explainable Cross-lingual Text Retrieval on Automotive domain
@@ -58,9 +58,6 @@ username = st.sidebar.text_input('Username', '',
                                  help="Enter a unique name. You may use your first name.")
 password = st.sidebar.text_input('Password', '', type="password", 
                                  help="Enter the password as in the email.")
-# group = st.sidebar.radio('Group', 
-#                             options=('A', 'B'),
-#                         help="Select the group as in the email.")
 
 users_df = load_users()
 
@@ -123,7 +120,12 @@ with st.form(key='my_form'):
     document = curr_df.document.values[0]
 
     col1.write('**ID**')
-    col2.write(q_id)    
+    if 'ST' in q_id:
+        color = '#e0e0e0'
+    else:
+        color = '#fdc3cd'
+    col2.markdown('<span style="%s: %s"><b>%s</b></span>' %('background-color', color, q_id), 
+                 unsafe_allow_html=True)
     col1.write('**Search query**')
     col2.write(query_text)
     col1.write('**Search result**')
