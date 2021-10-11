@@ -41,7 +41,7 @@ This boils us down to the topic of this thesis- an Explainable Cross-Lingual Tex
 - Aims at developing an explainable CLTR with a combination of model-agnostic and corpus-exploratory methods.
 - Evisages a transition from generic keyword based search to domain-specific semantic search aided by dense text representaions.
 
-### Plan 
+### Workflow 
 
 <p align="center">
   <img height="400" src="images/plan.png">
