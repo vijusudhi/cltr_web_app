@@ -1,1 +1,2 @@
 q_id, query, document, is_relevant, rel_words
+ST_011, Müdigkeitserkennung des Fahrers, The driver monitoring camera monitors the alertness and condition of the driver. It can detect distraction, drowsiness, and microsleeps and can alert the driver in time., Yes, driver: monitoring: camera: monitors: alertness: condition: detect: distraction: drowsiness: microsleeps: alert: time
