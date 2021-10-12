@@ -73,8 +73,8 @@ if username in usernames:
     if 'proceed' in st.session_state:
         pass
     else:
-        message_field.warning('User already found. If this is you, click Yes.')
-        btn_yes = st.sidebar.button('Yes, it is me.')
+        message_field.warning('User already found. If this is you, click Yes to proceed.')
+        btn_yes = st.sidebar.button('Yes, proceed.')
         if not btn_yes:
             st.stop()
     
