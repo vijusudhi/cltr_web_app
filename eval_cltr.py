@@ -54,43 +54,68 @@ st.sidebar.write('You are at the Phase I Evaluation of the Master thesis on **Ex
 st.sidebar.write('# **Login**')
 st.sidebar.write('Please enter your credentials and click **Enter**.')
 username = st.sidebar.text_input('Username', '', 
-                                 help="Enter the username as in the email.")
+                    help="Enter the username as in the email.")
 password = st.sidebar.text_input('Password', '', type="password", 
                                  help="Enter the password as in the email.")
+group = st.sidebar.radio('Select the group', 
+                        options=('A', 'B', 'C'),
+                        help='Select the group as in your email.').lower()
+# users_df = load_users()
 
-users_df = load_users()
+message_field = st.sidebar.empty()
 
 if not username or not password:
-    st.sidebar.info('You have not entered username and/or password')
-    st.sidebar.write('In case of any technical troubles, please drop a mail at viju.sudhi@audi.de')
+    message_field.info('You have not entered username and/or password')
     st.stop()
 
-if username not in users_df.user.to_list():
-    st.sidebar.error('Incorrect username. Please check your email.')
-    st.sidebar.write('In case of any technical troubles, please drop a mail at viju.sudhi@audi.de')
-    st.stop()
-
-group = users_df[users_df['user'] == username].group.values[0]
+# if username not in users_df.user.to_list():
+#     message_field.error('Incorrect username. Please check your email.')
+#     st.stop()
 
 github = Github('%s'%password.strip())
 try:
     repository = github.get_user().get_repo('cltr_web_app')
-    st.sidebar.success('Login successful!')
-    st.sidebar.write('In case of any technical troubles, please drop a mail at viju.sudhi@audi.de')
 except:
-    st.sidebar.error('Incorrect username. Please check your email.')
-    st.sidebar.write('In case of any technical troubles, please drop a mail at viju.sudhi@audi.de')
-    st.stop()    
+    message_field.error('Incorrect username. Please check your email.')
+    st.stop()  
 
-
-filename = '%s_log.csv' % username
+filename = '%s_%s_log.csv' % (username, group)
 log_files = [file.name for file in repository.get_contents("logs")]
+print('log_files', log_files)
+usernames = [file.split('_')[0] for file in log_files if file != '.gitignore']
+usergroups = [file.split('_')[1] for file in log_files if file != '.gitignore']
+print('usernames', usernames)
+print('usergroups', usernames)
 filepath = 'logs/%s' % filename
 
-if filename not in log_files:
+# if filename not in log_files:
+#     data = 'q_id, query, is_relevant, rel_words'
+#     f = repository.create_file(filepath, "User %s pushing via PyGithub" %username, data)
+#     message_field.success('Login successful!')        
+
+if username in usernames:
+    if 'proceed' in st.session_state:
+        pass
+    else:
+        message_field.warning('User already found. If this is you, click Yes.')
+        btn_yes = st.sidebar.button('Yes, it is me.')
+        if not btn_yes:
+            st.stop()
+    
+    usergroup = usergroups[usernames.index(username)]
+    if usergroup != group:
+        message_field.warning('You chose Group \'%s\' before. \
+        Please choose this group again to continue.' %usergroup.upper())
+        st.stop()
+else:
     data = 'q_id, query, is_relevant, rel_words'
     f = repository.create_file(filepath, "User %s pushing via PyGithub" %username, data)
+    message_field.success('Login successful!')      
 
+if 'proceed' not in st.session_state:
+    message_field.success('Login successful!')
+    st.session_state.proceed = 'yes'
+            
 inp, inp_qids = load_df(group)
 file = repository.get_contents(filepath)
 lines = file.decoded_content.decode()
