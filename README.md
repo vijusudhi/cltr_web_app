@@ -11,13 +11,13 @@ To motivate further, check what Google gives as search results for the same quer
 
 #### Do these search results (individually) satiate your comprehensive information need?
 
-To add a bit more persepctive, read through the **_Whys_**!
+To add a bit more perspective, read through the **_Whys_**!
 
 ## Why do I need a CLTR system?
 
 <img align="right" width="100" height="90" src="images/multilingual-icon-9.jpg">
 
-Cross-lingual Text retrieval (or, CLTR) system retrieves results from a collection of documents transcending the boundaries of language. We can seek aid of word embeddings like word2vec or fastText and the more recent transformer-based models like BERT to get embeddings in a common space. Thinking beyond the language we speak is indeed the pre-requisite in this age of booming information and to facilitate this, our search systems (or, Internet in general) should not be *just as big as the language we speak*. 
+Cross-lingual Text retrieval (or, CLTR) system retrieves results from a collection of documents transcending the boundaries of language. We can seek aid of word representations like word2vec or fastText and the more recent transformer-based models like BERT to get embeddings in a common space. Thinking beyond the language we speak is indeed the pre-requisite in this age of booming information and to facilitate this, our search systems (or, Internet in general) should not be *just as big as the language we speak*. 
 
 Read more about the digital language divide [here](http://labs.theguardian.com/digital-language-divide/). 
 
@@ -39,7 +39,7 @@ This boils us down to the topic of this thesis- an Explainable Cross-Lingual Tex
 ### Goal
 
 - Aims at developing an explainable CLTR with a combination of model-agnostic and corpus-exploratory methods.
-- Evisages a transition from generic keyword based search to domain-specific semantic search aided by dense text representaions.
+- Envisages a transition from generic keyword-based search to domain-specific semantic search aided by dense text representations.
 
 ### Workflow 
 
