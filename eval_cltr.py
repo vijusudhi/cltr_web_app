@@ -15,17 +15,6 @@ def load_df(group):
     inp_qids = inp.q_id.to_list()
     return inp, inp_qids
 
-# @st.cache(allow_output_mutation=True)
-def load_users():
-    users = pd.read_csv('users.csv', header=None, 
-            names=['user', 'group'],
-            delimiter=',')
-    return users
-
-@st.cache
-def convert_df(df):
-    return df.to_csv(index=False, header=False).encode('utf-8')
-
 col1, mid, col2 = st.columns([3,1,20])
 with col1:
     st.image('images/multilingual-icon-9.jpg', width=100)
@@ -54,23 +43,18 @@ st.sidebar.write('You are at the Phase I Evaluation of the Master thesis on **Ex
 st.sidebar.write('# **Login**')
 st.sidebar.write('Please enter your credentials and click **Enter**.')
 username = st.sidebar.text_input('Username', '', 
-                    help="Enter the username as in the email.")
+                    help="Enter a unique username, e.g. your first name.")
 password = st.sidebar.text_input('Password', '', type="password", 
-                                 help="Enter the password as in the email.")
+                                 help="Enter the password you received in the email.")
 group = st.sidebar.radio('Select the group', 
                         options=('A', 'B', 'C'),
-                        help='Select the group as in your email.').lower()
-# users_df = load_users()
+                        help='Select the group you received in the email.').lower()
 
 message_field = st.sidebar.empty()
 
 if not username or not password:
     message_field.info('You have not entered username and/or password')
     st.stop()
-
-# if username not in users_df.user.to_list():
-#     message_field.error('Incorrect username. Please check your email.')
-#     st.stop()
 
 github = Github('%s'%password.strip())
 try:
@@ -81,17 +65,9 @@ except:
 
 filename = '%s_%s_log.csv' % (username, group)
 log_files = [file.name for file in repository.get_contents("logs")]
-print('log_files', log_files)
 usernames = [file.split('_')[0] for file in log_files if file != '.gitignore']
 usergroups = [file.split('_')[1] for file in log_files if file != '.gitignore']
-print('usernames', usernames)
-print('usergroups', usernames)
-filepath = 'logs/%s' % filename
-
-# if filename not in log_files:
-#     data = 'q_id, query, is_relevant, rel_words'
-#     f = repository.create_file(filepath, "User %s pushing via PyGithub" %username, data)
-#     message_field.success('Login successful!')        
+filepath = 'logs/%s' % filename  
 
 if username in usernames:
     if 'proceed' in st.session_state:
@@ -126,12 +102,7 @@ if len(to_do) >= 1:
     q_id = to_do[0]
 else:
     st.balloons()
-    st.write('You have evaluated all the documents. Thanks for your time! :smile:')
-    # st.download_button(
-    #     label="Download data as CSV",
-    #     data=convert_df(log),
-    #     file_name=filename,
-    # )      
+    st.write('You have evaluated all the documents. Thanks for your time! :smile:')    
     st.stop()
 
 curr_df = inp[inp['q_id'] == q_id]  
