@@ -5,3 +5,4 @@ ST_022, Wrong way driving warning, Yes, automatischen: spurwechsel: geschwindigk
 CT_022, Wrong way driving warning, Yes, querverkehrswarnung: versperrter: rückwärtige: ausparken: querparklücken: warnt: querenden: fahrzeugen
 ST_023, Kreuzung sassistenten, Yes, complex: intersection: scenarios: dangerous: situations: impaired: visibility: stationary: traffic: warn: driver: vision: warned: good: time: risk: collision: intersecting: passed: vehicle: yielding: right: way: journey
 CT_023, Kreuzung sassistenten, Yes, rear: cross: traffic: warning: backing: parking: space: obstructed: warns: crossing: vehicles
+ST_024, Electronic stability control, Yes, elektrolenkung: unterstützt: lenkung: fahrzeugen: elektronisch: gesteuerten: elektromotors: elektronische: fail-operational: hochautomatisierte: fahren: gemäß
