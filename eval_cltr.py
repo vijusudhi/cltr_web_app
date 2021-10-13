@@ -39,7 +39,10 @@ def update(is_relevant_opt, rel_words_sel, submit_button):
                                     data, sha=file.sha)
 
 
-st.sidebar.write('You are at the Phase I Evaluation of the Master thesis on **Explainable Cross-Lingual Text Retrieval** on Automotive domain. To know more about the thesis and this evaluation, click [here](https://vijusudhi.github.io/cltr_web_app/).')
+st.sidebar.write('You are at the Phase I Evaluation of the Master thesis on \
+**Explainable Cross-Lingual Text Retrieval** on Automotive domain. To know \
+more about the thesis and this evaluation, click [here] \
+(https://vijusudhi.github.io/cltr_web_app/).')
 st.sidebar.write('# **Login**')
 st.sidebar.write('Please enter your credentials and click **Enter**.')
 username = st.sidebar.text_input('Username', '', 
@@ -51,16 +54,21 @@ group = st.sidebar.radio('Select the group',
                         help='Select the group you received in the email.').lower()
 
 message_field = st.sidebar.empty()
+btn_yes_field = st.sidebar.empty()
 
 if not username or not password:
-    message_field.info('You have not entered username and/or password')
+    message_field.info('You have not entered username and/or password. Please try again!')
     st.stop()
+    
+if '_' in username:
+    message_field.info('You can not use an underscore (_) in your username. Please try again!')
+    st.stop()    
 
 github = Github('%s'%password.strip())
 try:
     repository = github.get_user().get_repo('cltr_web_app')
 except:
-    message_field.error('Incorrect username. Please check your email.')
+    message_field.error('Incorrect password. Please check your email.')
     st.stop()  
 
 filename = '%s_%s_log.csv' % (username, group)
@@ -71,15 +79,22 @@ filepath = 'logs/%s' % filename
 
 if username in usernames:
     if 'proceed' in st.session_state:
-        pass
+        if st.session_state.proceed != username:
+            message_field.warning('User already found. If this is you, click Yes to proceed.')
+            btn_yes = btn_yes_field.button('Yes, proceed')
+            if not btn_yes:
+                st.stop()
+        else:
+            pass
     else:
         message_field.warning('User already found. If this is you, click Yes to proceed.')
-        btn_yes = st.sidebar.button('Yes, proceed.')
+        btn_yes = btn_yes_field.button('Yes, proceed')
         if not btn_yes:
             st.stop()
     
     usergroup = usergroups[usernames.index(username)]
     if usergroup != group:
+        btn_yes_field.empty()
         message_field.warning('You chose Group \'%s\' before. \
         Please choose this group again to continue.' %usergroup.upper())
         st.stop()
@@ -88,9 +103,9 @@ else:
     f = repository.create_file(filepath, "User %s pushing via PyGithub" %username, data)
     message_field.success('Login successful!')      
 
-if 'proceed' not in st.session_state:
-    message_field.success('Login successful!')
-    st.session_state.proceed = 'yes'
+btn_yes_field.empty()
+message_field.success('Login successful!')
+st.session_state.proceed = username
             
 inp, inp_qids = load_df(group)
 file = repository.get_contents(filepath)
@@ -134,7 +149,6 @@ with st.form(key='my_form'):
         should be returned while a user searches for this query. \
         Select "No" otherwise.')
     
-    print(document, curr_df.lang.values[0])
     words = tokenize.get_tokens(document, lang=curr_df.lang.values[0])
 
     rel_words_sel = st.multiselect(
