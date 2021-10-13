@@ -1,3 +1,4 @@
 q_id, query, is_relevant, rel_words
 ST_021, Falsche Fahrwarnung, Yes, integrated: collision: detection: triggering: safety: features: airbags: seat: belts: fact: triggered: within: milliseconds: impact: achieved: integrating: vehicles: surround: sensors: mechanism: passive: systems: accident: used: make: crash: algorithms: sensitive: impacts: way: severity: early: accurately: result: restraint: devices: activated: sooner: reliably: risk: injuries: occupants: reduced: significantly
 CT_021, Falsche Fahrwarnung, Yes, rear: cross: traffic: warning: backing: parking: space: easier: view: obstructed: warns: crossing: vehicles
+ST_022, Wrong way driving warning, Yes, automatischen: spurwechsel: geschwindigkeitsbereich: km/h: ergänzt: überwachung: seitlichen: rückwärtigen: verkehrs: eck-radarsensoren: fahrer: signalisiert: betätigen: blinkers: system: gefahrlos: nebenspur: gewechselt: fahrverantwortung: fahrzeugführung
