@@ -49,15 +49,14 @@ username = st.sidebar.text_input('Username', '',
                     help="Enter a unique username, e.g. your first name.")
 password = st.sidebar.text_input('Password', '', type="password", 
                                  help="Enter the password you received in the email.")
-group = st.sidebar.radio('Select the group', 
-                        options=('A', 'B', 'C'),
-                        help='Select the group you received in the email.').lower()
+group = st.sidebar.text_input('Group (A / B / C)', 
+                        help='Enter the group you received in the email.').lower()
 
 message_field = st.sidebar.empty()
 btn_yes_field = st.sidebar.empty()
 
-if not username or not password:
-    message_field.info('You have not entered username and/or password. Please try again!')
+if not username or not password or not group:
+    message_field.info('You have not entered either of these - username, password, group. Please try again!')
     st.stop()
     
 if '_' in username:
@@ -95,8 +94,8 @@ if username in usernames:
     usergroup = usergroups[usernames.index(username)]
     if usergroup != group:
         btn_yes_field.empty()
-        message_field.warning('You chose Group \'%s\' before. \
-        Please choose this group again to continue.' %usergroup.upper())
+        message_field.warning('You entered Group \'%s\' before. \
+        Please enter this group again to continue.' %usergroup.upper())
         st.stop()
 else:
     data = 'q_id, query, is_relevant, rel_words'
