@@ -3,3 +3,4 @@ ST_021, Falsche Fahrwarnung, Yes, integrated: collision: detection: triggering: 
 CT_021, Falsche Fahrwarnung, Yes, rear: cross: traffic: warning: backing: parking: space: easier: view: obstructed: warns: crossing: vehicles
 ST_022, Wrong way driving warning, Yes, automatischen: spurwechsel: geschwindigkeitsbereich: km/h: ergänzt: überwachung: seitlichen: rückwärtigen: verkehrs: eck-radarsensoren: fahrer: signalisiert: betätigen: blinkers: system: gefahrlos: nebenspur: gewechselt: fahrverantwortung: fahrzeugführung
 CT_022, Wrong way driving warning, Yes, querverkehrswarnung: versperrter: rückwärtige: ausparken: querparklücken: warnt: querenden: fahrzeugen
+ST_023, Kreuzung sassistenten, Yes, complex: intersection: scenarios: dangerous: situations: impaired: visibility: stationary: traffic: warn: driver: vision: warned: good: time: risk: collision: intersecting: passed: vehicle: yielding: right: way: journey
