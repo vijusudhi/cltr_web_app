@@ -17,3 +17,4 @@ ST_028, Mass Air Flow Sensor, Yes, messprinzip: druckbasierten: luftmassenmesser
 CT_028, Mass Air Flow Sensor, Yes, saugrohrluftdruck-: -temperatursensor: druck: lufttemperatur: saugrohr: mikromechanische: sensor: enthält: piezoresistives: sensorelement: elektrische: spannung: luftdruck: optimiertes: kraftstoff-luft-gemisch: effizientere: verbrennung
 ST_029, Kurbelwellensensor, No, speed: sensor: detects: rotational: exhaust-gas: turbochargers
 CT_029, Kurbelwellensensor, No, robust: crin-le: common-rail: injector: injects: exactly: right: amount: fuel: required: efficient: combustion: cylinder: high-pressure: accumulator: integrated: allows: flexible: engine: design: provided: every: power: output: within: range: kw/cylinder
+ST_030, Crankshaft Sensor, Yes, klopfsensor: kurbelgehäuse: körperschall: piezoelektrischen: messelement: klopfende: verbrennungen: sensor: typischen: schallfrequenzen: klopfgeräusche: motorsteuergerät: zündzeitpunkt: entsprechend
