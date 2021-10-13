@@ -13,3 +13,4 @@ ST_026, Motordrehzahlsensor, Yes, speed: sensor: rotational: exhaust-gas: turboc
 CT_026, Motordrehzahlsensor, Yes, crankshaft: speed: sensor: engine: management: system: measures: position: rotational: direction
 ST_027, Engine Speed Sensor, Yes, optimale: motorsteuerung: antriebsstrang: sensoren: kurbelwellen-drehzahlsensors: elektronische: motorsteuergerät: drehzahl: position: optional: drehrichtung: kurbelwelle: steuerung: einspritz-: und/oder: zündzeitpunkt: emissionsgrenzwerten: komfort: motorlauf
 CT_027, Engine Speed Sensor, Yes, drehzahlsensor: drehzahl: abgasturboladern: eingangsgröße: steuerung: aufladesystems
+ST_028, Mass Air Flow Sensor, Yes, messprinzip: druckbasierten: luftmassenmessers: staurohrs: sensor: drucksensoren: temperaturfühler: dynamische: druck: statische: temperatur: vorbeiströmenden: luft: luftmasse: luftmassenmesser: gehäuse: messrohr: ragt
