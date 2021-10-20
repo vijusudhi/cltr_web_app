@@ -7,3 +7,4 @@ ST_023, Kreuzung sassistenten, Yes, complex: intersection: scenarios: dangerous:
 CT_023, Kreuzung sassistenten, No, 
 ST_024, Electronic stability control, No, elektrolenkung: servolectric®: regelt: unterstützt: lenkung: fahrzeugen: mithilfe: elektronisch: gesteuerten: elektromotors: elektronische: schnittstelle: ermöglicht: fail-operational: ausführung: hochautomatisierte: fahren: gemäß: level: aufwärts
 CT_024, Electronic stability control, Yes, elektronische: stabilitäts-programm: erkennt: schleuderbewegungen: fahrzeugs: wirkt: aktiv: entgegen
+ST_025, Oxygen Sensors, No, skalierbare: fuel: cell: power: module: brennstoffzellensystem: stromerzeugung: fahrzeug: wasserstoff
