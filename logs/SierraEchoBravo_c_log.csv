@@ -12,3 +12,4 @@ CT_025, Oxygen Sensors, Yes, mems-sensoren: veränderungen: umgebung: erfassen: 
 ST_026, Motordrehzahlsensor, Yes, speed: sensor: detects: rotational
 CT_026, Motordrehzahlsensor, Yes, crankshaft: speed: sensor: measures: position: rotational: direction
 ST_027, Engine Speed Sensor, Yes, aktuelle: präzise: informationen: sensoren: kurbelwellen-drehzahlsensors: ermittelt: drehzahl: position: drehrichtung: kurbelwelle: kurbelwellen-drehzahlsensor
+CT_027, Engine Speed Sensor, Yes, drehzahlsensor: erfassung: drehzahl
