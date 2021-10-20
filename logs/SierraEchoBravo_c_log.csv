@@ -6,3 +6,4 @@ CT_022, Wrong way driving warning, No, querverkehrswarnung: erleichtert: versper
 ST_023, Kreuzung sassistenten, Yes, complex: intersection: scenarios: dangerous: situations: impaired: visibility: stationary: traffic: buildings: v2x: warn: driver: approaching: outside: field: vision: warned: risk: collision: intersecting: vehicle: yielding
 CT_023, Kreuzung sassistenten, No, 
 ST_024, Electronic stability control, No, elektrolenkung: servolectric®: regelt: unterstützt: lenkung: fahrzeugen: mithilfe: elektronisch: gesteuerten: elektromotors: elektronische: schnittstelle: ermöglicht: fail-operational: ausführung: hochautomatisierte: fahren: gemäß: level: aufwärts
+CT_024, Electronic stability control, Yes, elektronische: stabilitäts-programm: erkennt: schleuderbewegungen: fahrzeugs: wirkt: aktiv: entgegen
