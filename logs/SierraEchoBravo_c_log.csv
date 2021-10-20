@@ -10,3 +10,4 @@ CT_024, Electronic stability control, Yes, elektronische: stabilitäts-programm:
 ST_025, Oxygen Sensors, No, skalierbare: fuel: cell: power: module: brennstoffzellensystem: stromerzeugung: fahrzeug: wasserstoff
 CT_025, Oxygen Sensors, Yes, mems-sensoren: veränderungen: umgebung: erfassen: genauigkeit: messungen
 ST_026, Motordrehzahlsensor, Yes, speed: sensor: detects: rotational
+CT_026, Motordrehzahlsensor, Yes, crankshaft: speed: sensor: measures: position: rotational: direction
