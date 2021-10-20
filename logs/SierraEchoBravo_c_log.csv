@@ -13,3 +13,4 @@ ST_026, Motordrehzahlsensor, Yes, speed: sensor: detects: rotational
 CT_026, Motordrehzahlsensor, Yes, crankshaft: speed: sensor: measures: position: rotational: direction
 ST_027, Engine Speed Sensor, Yes, aktuelle: präzise: informationen: sensoren: kurbelwellen-drehzahlsensors: ermittelt: drehzahl: position: drehrichtung: kurbelwelle: kurbelwellen-drehzahlsensor
 CT_027, Engine Speed Sensor, Yes, drehzahlsensor: erfassung: drehzahl
+ST_028, Mass Air Flow Sensor, Yes, luftmassenmessers: sensor: vorbeiströmenden: luft: luftmasse: luftmassenmesser: messrohr
