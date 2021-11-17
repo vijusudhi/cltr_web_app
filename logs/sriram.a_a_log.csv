@@ -5,3 +5,4 @@ ST_002, Zündschloss geräte, Yes, electronic: immobilizer: secures: vehicle: ac
 CT_002, Zündschloss geräte, No, conveyor: belts: special: transport: bulk: material: mobile: machinery
 ST_003, Anti lock braking system, Yes, antiblockiersystem: abs: verhindert: blockieren: räder: ermöglicht: sicheres: bremsen
 CT_003, Anti lock braking system, Yes, antiblockiersystem: hilft: beim: sicheren: bremsen: sorgt: verkürzte: bremswege: verringerte: sturzgefahr: abrupten: bremsmanövern
+ST_004, Automotive night vision, Yes, nutzt: lichtquellen: fahrzeugen: straße: anzupassen: optimieren: maximale: sicherheit: gewährleisten
