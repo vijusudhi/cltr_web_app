@@ -10,3 +10,4 @@ CT_004, Automotive night vision, Yes, off-highway: vision: system: zentral: steu
 ST_005, Nachtsicht im Auto, Yes, located: system: vehicle: blind: spot: area: driver: turn: signal: warning: help: alert
 CT_005, Nachtsicht im Auto, Yes, block: car: time: freeway
 ST_006, Blind spot monitor, Yes, sehen: umgebung
+CT_006, Blind spot monitor, Yes, erkennt: fahrzeuge: schlecht: bereichen: gefahr: fahrer
