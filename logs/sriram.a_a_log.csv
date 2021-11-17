@@ -9,3 +9,4 @@ ST_004, Automotive night vision, Yes, nutzt: lichtquellen: fahrzeugen: straße: 
 CT_004, Automotive night vision, Yes, off-highway: vision: system: zentral: steuereinheit: ermöglicht: feldmaschine: implement: bietet: fahrzeugs: schnelles: manövrieren: gelände: unterstützt
 ST_005, Nachtsicht im Auto, Yes, located: system: vehicle: blind: spot: area: driver: turn: signal: warning: help: alert
 CT_005, Nachtsicht im Auto, Yes, block: car: time: freeway
+ST_006, Blind spot monitor, Yes, sehen: umgebung
