@@ -11,3 +11,4 @@ ST_005, Nachtsicht im Auto, Yes, located: system: vehicle: blind: spot: area: dr
 CT_005, Nachtsicht im Auto, Yes, block: car: time: freeway
 ST_006, Blind spot monitor, Yes, sehen: umgebung
 CT_006, Blind spot monitor, Yes, erkennt: fahrzeuge: schlecht: bereichen: gefahr: fahrer
+ST_007, Toter Winkel Monitor, Yes, autonomous: driving: set: sensors: monitor: road: provide: 360°: surveillance: vehicle: lidars: long-range: laser: scanners: frontal: radar: medium-range: corner: digital: cameras: four: 180°: ultrasound: belt
