@@ -13,3 +13,4 @@ ST_006, Blind spot monitor, Yes, sehen: umgebung
 CT_006, Blind spot monitor, Yes, erkennt: fahrzeuge: schlecht: bereichen: gefahr: fahrer
 ST_007, Toter Winkel Monitor, Yes, autonomous: driving: set: sensors: monitor: road: provide: 360°: surveillance: vehicle: lidars: long-range: laser: scanners: frontal: radar: medium-range: corner: digital: cameras: four: 180°: ultrasound: belt
 CT_007, Toter Winkel Monitor, Yes, sensor: onto: steering: shaft: hub: gear: wheel: transmits: rotary: movement: two: measuring: wheels: magnet: mounted: whose: field: changes: direction: accordance: rotational: gmr: element: located: detect: angle: position: analog: values: elements: converted: digital: information: directly: circuit: sent: microprocessor: via: serial: interface
+ST_008, Collision avoidance system, Yes, eingesetzte: sensorik: fußgänger: objekte: fahrweg: erkennt: kommt: fahrzeug: hindernis: zuverlässig: stehen
