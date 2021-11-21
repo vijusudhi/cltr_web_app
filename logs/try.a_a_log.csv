@@ -3,3 +3,4 @@ ST_001, ignition interlock devices, No, estroller: system: bietet: bosch: innova
 CT_001, ignition interlock devices, No, kühlmittel-schaltventile: steuern: kühlmitteldurchfluss: nebenkühlkreisläufen: antriebsstrangs: heizkreisläufen: fahrgastraums
 ST_002, Zündschloss geräte, No, electronic: immobilizer: secures: vehicle: theft: achieved: transponder: code: ignition: key: switched: read: smartra: smart: intelligent: communications: interface: using: antenna: valid: releases: engine: electronics: system: another: coded: signal: required: start
 CT_002, Zündschloss geräte, No, conveyor: belts: special: transport: bulk: material: mobile: machinery
+ST_003, Anti lock braking system, No, antiblockiersystem: abs: verhindert: blockieren: räder: ermöglicht: sicheres: bremsen
