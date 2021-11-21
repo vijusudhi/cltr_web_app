@@ -14,3 +14,4 @@ CT_016, Spur zentrierung, Yes, lane: centering: assist: uses: multi: purpose: ca
 ST_017, Spurwechsel assistenz, No, lane: departure: warning: uses: video: camera: detect: markings: ahead: vehicle: warns: driver: leaving
 CT_017, Spurwechsel assistenz, Yes, lane: change: assist: works: using: two: corner: radar: sensors: concealed: rear: bumper: one: left: right: monitor: area: alongside: behind: car: powerful: control: software: collates: sensor: information: create: complete: picture: traffic: vehicle
 ST_018, Tire pressure monitoring, No, reifen: verfügt: reifenventil: sensor: fahrt: regelmäßig
+CT_018, Tire pressure monitoring, No, saugrohrluftdruck-: -temperatursensor: misst: druck: lufttemperatur: saugrohr: mikromechanische: sensor: enthält: piezoresistives: sensorelement: ausübung: messbare: elektrische: spannung: erzeugt: luftdruck: gemessen: sorgt: optimiertes: kraftstoff-luft-gemisch: effizientere: verbrennung
