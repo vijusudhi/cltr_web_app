@@ -9,3 +9,4 @@ ST_014, Intelligent speed adaptation, No, leistungsfähigkeit: verkehrszeichenin
 CT_014, Intelligent speed adaptation, No, adaptive: abstands-: geschwindigkeitsregelung: passt: geschwindigkeit: verkehrsfluss
 ST_015, Intelligente Geschwindigkeitsanpassung, No, detection: implicit: explicit: speed: limitation: signs: inform: driver: maximum: allowed: velocity: includes: conditional: limits: supplementary: sign: optical: character: reading: optionally: sla: extended: intelligent: assist: isa: adapting: cruise: control: limit: information: traffic: recognition
 CT_015, Intelligente Geschwindigkeitsanpassung, Yes, intelligent: speed: assistance: system: designed: assist: driver: maintaining: matches: road: conditions: providing: targeted: appropriate: feedback
+ST_016, Spur zentrierung, Yes, circular: area: includes: parking: acceleration: track: testing: used: braking: maneuvers: lane: changes: driving: circle: markings: provided: different: radii: handling: course
