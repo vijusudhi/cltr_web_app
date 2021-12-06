@@ -10,3 +10,4 @@ CT_004, Automotive night vision, Yes, off-highway: vision: system: zentral: 360�
 ST_005, Nachtsicht im Auto, Yes, lights: system: vehicle: flash
 CT_005, Nachtsicht im Auto, Yes, car
 ST_006, Blind spot monitor, No, einparkhilfe: erweitert: peugeot: sw: 180°-videokamera: motorhaube: sehen: beim: parken: touchscreen: umgebung: kompaktlimousine: parksensoren: zusätzlich: kamerabild: genutzt
+CT_006, Blind spot monitor, No, totwinkelwarner: erkennt: fahrzeuge: schlecht: einsehbaren: bereichen: warnt: gefahr: fahrer: optischen: signal
