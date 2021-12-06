@@ -8,3 +8,4 @@ CT_003, Anti lock braking system, Yes, antiblockiersystem: sicheren: bremsen: ve
 ST_004, Automotive night vision, Yes, peugeot: kamera: oberseite: windschutzscheibe: lichtquellen: system: automatisch: abblend-: fernlicht: lichtverhältnissen: fahrzeugen: nutzungsdauer: fernlichtes: sicherheit
 CT_004, Automotive night vision, Yes, off-highway: vision: system: zentral: 360°: view: full-hd: vier: kameras: steuereinheit: sichtbereiche: feldmaschine: fahrzeugs: manövrieren: gelände
 ST_005, Nachtsicht im Auto, Yes, lights: system: vehicle: flash
+CT_005, Nachtsicht im Auto, Yes, car
