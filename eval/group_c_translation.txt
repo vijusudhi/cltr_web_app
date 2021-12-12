@@ -1,0 +1,85 @@
+QUERIES
+Wrong driving warning
+Wrong driving warning
+Wrong way driving warning
+Wrong way driving warning
+Crossroad assistant
+Crossroad assistant
+Electronic stability control
+Electronic stability control
+Oxygen sensors
+Oxygen sensors
+Engine speed sensor
+Engine speed sensor
+Engine speed sensor
+Engine speed sensor
+Mass Air Flow Sensor
+Mass Air Flow Sensor
+Crankshaft sensor
+Crankshaft sensor
+Crankshaft sensor
+Crankshaft sensor
+
+DOCUMENTS
+Integrated collision detection enables earlier and more reliable triggering of the safety features, such as airbags and seat belts. In fact, it can be triggered within just 25 milliseconds of impact. This is achieved by integrating data collected by the vehicle's surround sensors into the triggering mechanism of the passive safety systems. Thus information that is already available prior to an accident is used to make the crash algorithms more sensitive to impacts. This way the severity of the accident and the accident type can be determined early and accurately. The result: Restraint devices can be activated sooner and more reliably and the risk of injuries to occupants is reduced significantly.
+
+The rear cross traffic warning makes backing out of a parking space easier when the rear view is obstructed and warns of crossing vehicles.
+
+The Bosch driver assistant can be supplemented with an automatic lane change in the speed range of 70 - 130 km / h. This requires additional monitoring of the traffic to the side and to the rear using additional corner radar sensors. By activating the indicator, the driver signals his wish to change lanes, whereupon the system carries out this as soon as it is safe to change to the next lane. The driver still remains responsible for driving and must be able to take over driving the vehicle at any time.
+
+The cross traffic warning makes it easier to reverse out of parking spaces when the view is blocked and warns of crossing vehicles.
+
+Especially in complex intersection scenarios, dangerous situations will often arise as a result of impaired visibility due to stationary traffic or buildings. V2X is used to warn the driver about approaching traffic, even traffic that is outside the driver’s field of vision. The driver is warned in good time about the risk of collision with intersecting traffic. Only when the intersecting traffic has passed the intersection will the vehicle yielding the right of way continue on its journey.
+
+The rear cross traffic warning makes backing out of a parking space easier when the rear view is obstructed and warns of crossing vehicles.
+
+The Servolectric® electric power steering regulates and supports the steering of vehicles with the help of an electronically controlled electric motor. Thanks to its electronic interface, fail-operational enables the Servolectric® to be implemented for highly automated driving in accordance with level 3 and above.
+
+The electronic stability program detects skidding movements of the vehicle and actively counteracts them.
+
+The scalable Fuel Cell Power Module is a fuel cell system for generating electricity in vehicles from hydrogen.
+
+Bosch MEMS sensors play a major role in making mobility more efficient, more convenient and safer, and also in increasing driving fun and enthusiasm. They are also a basic building block for the networked world. These clandestine heroes show their super abilities when it comes to capturing the smallest changes in their surroundings. With the accuracy of their measurements, they ensure that the system is always up to date.
+
+The speed sensor detects the rotational speed of exhaust-gas turbochargers.
+
+Via the crankshaft speed sensor the engine management system measures the speed, position and rotational direction of the crankshaft.
+
+The basis for optimal engine control is up-to-date, precise information from the drive train, which is supplied by sensors. With the help of the crankshaft speed sensor, the electronic engine control unit determines the speed, position and, optionally, the direction of rotation of the crankshaft. These data are used to control the injection and / or ignition timing. The crankshaft speed sensor thus supports compliance with emission limit values ​​and improves comfort thanks to the smooth running of the engine.
+
+The speed sensor is used to record the speed of exhaust gas turbochargers. It thus provides an essential input variable for the efficient control of the charging system.
+
+The principle of the Prandtl Pitot tube forms the basis for the measuring principle of the pressure-based air mass meter. For this purpose, two pressure sensors and a temperature sensor are built into the sensor. The dynamic pressure Δp, the static pressure ps, and the temperature T of the air flowing past are recorded, and the air mass is thus calculated. It is important that the housing of the air mass meter protrudes into a measuring tube.
+
+The intake manifold air pressure and temperature sensor measures the pressure and the air temperature in the intake manifold. The micromechanical sensor contains a piezoresistive sensor element that generates a measurable electrical voltage when pressure is applied. The air pressure can be measured via the voltage. The sensor ensures an optimized fuel-air mixture for more efficient combustion.
+
+The speed sensor detects the rotational speed of exhaust-gas turbochargers.
+
+The robust CRIN-LE common-rail injector injects exactly the right amount of fuel required for efficient combustion into the cylinder. The high-pressure accumulator integrated in the injector allows a flexible engine design. The right injector can be provided for every power output within a range of 50 to 450 kW / cylinder.
+
+The knock sensor is mounted directly on the crankcase and measures the structure-borne noise with a piezoelectric measuring element. The sensor recognizes knocking burns from the higher sound frequencies that are typical for them. If the sensor reports knocking noises, the engine control unit adjusts the ignition timing accordingly.
+
+The brake pad wear sensor provides the driver with precise information about the current wear on the vehicle's brake pads.
+
+
+KEYWORDS
+['integrated', 'collision', 'detection', 'enables',' earlier ',' reliable ',' triggering ',' safety ',' features', 'airbags',' seat ',' belts', ' fact ',' triggered ',' within ',' milliseconds', 'impact', 'achieved', 'integrating', 'data', 'collected', 'vehicles',' surround ',' sensors', 'mechanism' , 'passive', 'systems',' thus', 'information', 'already', 'available', 'prior', 'accident', 'used', 'make', 'crash', 'algorithms',' sensitive ',' impacts', 'way', 'severity', 'type', 'determined', 'early', 'accurately', 'result', 'restraint', 'devices',' activated ',' sooner ' , 'reliably', 'risk', 'injuries', 'occupants', 'reduced', 'significantly']
+['rear', 'cross',' traffic ',' warning ',' makes', 'backing', 'parking', 'space', 'easier', 'view', 'obstructed', 'warns',' crossing ',' vehicles']
+['Bosch', 'driving assistant', 'automatic', 'lane change', 'speed range', '-', 'km / h', 'supplemented', 'for', 'additional', 'monitoring', 'lateral' , 'rearward', 'traffic', 'corner radar sensors', 'required', 'driver', 'signals', 'actuate', 'blinkers', 'request', 'whereupon', 'system', 'carries out' , 'as soon as', 'safe', 'next lane', 'changed', 'remains', 'nevertheless', 'driving responsibility', 'driving the vehicle', 'at any time', 'taking over']
+['Cross traffic warning', 'relieved', 'blocked', 'view', 'backwards', 'park out', 'cross parking spaces', 'warn', 'crossing', 'vehicles']
+['especially', 'complex', 'intersection', 'scenarios',' dangerous', 'situations',' often ',' arise ',' result ',' impaired ',' visibility ',' due ',' stationary ',' traffic ',' buildings ',' v2x ',' used ',' warn ',' driver ',' approaching ',' even ',' outside ',' '', 'field', 'vision' , 'warned', 'good', 'time', 'risk', 'collision', 'intersecting', 'passed', 'vehicle', 'yielding', 'right', 'way', 'continue', ' journey ']
+['rear', 'cross',' traffic ',' warning ',' makes', 'backing', 'parking', 'space', 'easier', 'view', 'obstructed', 'warns',' crossing ',' vehicles']
+['electric steering', 'servolectric®', 'regulates', 'assisted', 'steering', 'vehicles', 'using', 'electronic', 'controlled', 'electric motor', 'electronic', 'interface', 'enables', 'fail-operational', 'execution', 'highly automated', 'drive', 'according to', 'level', 'upwards']
+['electronic', 'stability program', 'detects', 'skidding movements', 'vehicle', 'acts', 'active', 'counteracts']
+['scalable', 'fuel', 'cell', 'power', 'module', 'fuel cell system', 'electricity generation', 'vehicle', 'hydrogen']
+['bosch', 'memes sensors', 'play', 'big', 'role', 'there', 'mobility', 'more efficient', 'more convenient', 'safer', 'beyond', 'beyond' , 'driving fun', 'enthusiasm', 'increase', 'basic building block', 'networked', 'world', 'hidden', 'effective', 'heroes',' show ',' super skills', 'therefore', ' works', 'smallest', 'changes',' environment ',' record ',' accuracy ',' measurements', 'ensure', 'ensure', 'system', 'always',' running ']
+['speed', 'sensor', 'detects', 'rotational', 'exhaust-gas', 'turbochargers']
+['via', 'crankshaft', 'speed', 'sensor', 'engine', 'management', 'system', 'measures', 'position', 'rotational', 'direction']
+['basis', 'optimal', 'engine control', 'current', 'precise', 'information', 'drive train', 'sensors', 'delivered', 'using', 'crankshaft speed sensor', 'determined' , 'electronic', 'engine control unit', 'speed', 'position', 'optional', 'direction of rotation', 'crankshaft', 'data', 'serve', 'control', 'injection', 'and / or ',' ignition point ',' crankshaft speed sensor ',' supported ',' thus', 'compliance', 'emission limits',' improved ',' comfort ',' quiet ',' engine running ']
+['speed sensor', 'serves', 'detection', 'speed', 'exhaust gas turbocharger', 'provides', 'essential', 'input variable', 'efficient', 'control', 'charging system', 'ready']
+['basis',' measuring principle ',' pressure-based ',' air mass meter ',' forms', 'principle', 'prandtlschen', 'pitot tube', 'sensor', 'two', 'pressure sensors',' temperature sensors', ' built in ',' dynamic ',' pressure ',' δp ',' static ',' ps', 'temperature', 't', 'flowing past', 'air', 'recorded', 'air mass',' calculated ' , 'important', 'included', 'air mass meter', 'housing', 'measuring tube', 'protruding']
+['intake manifold air pressure', 'temperature sensor', 'measures', 'pressure', 'air temperature', 'intake manifold', 'micromechanical', 'sensor', 'contains', 'piezoresistive', 'sensor element', 'exercise' , 'measurable', 'electrical', 'voltage', 'generated', 'air pressure', 'measured', 'provides', 'optimized', 'fuel-air mixture', 'more efficient', 'combustion']
+['speed', 'sensor', 'detects', 'rotational', 'exhaust-gas', 'turbochargers']
+['robust', 'crin-le', 'common-rail', 'injector', 'injects',' exactly ',' right ',' amount ',' fuel ',' required ',' efficient ',' combustion ',' cylinder ',' high-pressure ',' accumulator ',' integrated ',' allows ',' flexible ',' engine ',' design ',' provided ',' every ',' power ',' output ',' within ',' range ',' kw / cylinder ']
+['knock sensor', 'direct', 'crankcase', 'mounted', 'measures',' structure-borne noise ',' piezoelectric ',' measuring element ',' knocking ',' burns', 'detects',' sensor ',' typical ',' higher ',' sound frequencies', 'reports',' knocking noises', 'fits',' engine control unit ',' ignition point ',' corresponding ']
+['brake pad wear sensor', 'informs', 'driver', 'exact', 'current', 'wear', 'brake pads', 'vehicle']

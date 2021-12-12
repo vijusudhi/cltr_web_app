@@ -7,11 +7,14 @@ import sys
 sys.path.append('../')
 from util import tokenize
 
+st.set_page_config(layout="centered")
+
 @st.cache(allow_output_mutation=True)
 def load_df(group):
-    inp = pd.read_csv('eval/group_%s_eval.csv' % group, header=None, 
-                  names=['q_id', 'query_text', 'document', 'lang'],
-                  delimiter=',')
+    # inp = pd.read_csv('eval/group_%s_eval.csv' % group, header=None, 
+    #               names=['q_id', 'query_text', 'document', 'lang'],
+    #               delimiter=',')
+    inp = pd.read_csv('eval/group_%s_extended.csv' % group)
     inp_qids = inp.q_id.to_list()
     return inp, inp_qids
 
@@ -47,8 +50,14 @@ st.sidebar.write('# **Login**')
 st.sidebar.write('Please enter your credentials and click **Enter**.')
 username = st.sidebar.text_input('Username', '', 
                     help="Enter a unique username, e.g. your first name.")
-password = st.sidebar.text_input('Password', '', type="password", 
-                                 help="Enter the password you received in the email.")
+pw1 = "ghp"
+pw2 = "_RCMyRYqp"
+pw3 = "liQMdoKwN"
+pw4 = "CALyNMchME"
+pw5 = "KBa4XbvhN"
+password = f"{pw1}{pw2}{pw3}{pw4}{pw5}"
+# password = st.sidebar.text_input('Password', '', type="password", 
+#                                  help="Enter the password you received in the email.")
 group = st.sidebar.text_input('Group (A / B / C)', 
                         help='Enter the group you received in the email.').lower()
 
@@ -124,9 +133,11 @@ curr_df = inp[inp['q_id'] == q_id]
 latest_iteration = st.empty()
 my_bar = st.progress(0)
 with st.form(key='my_form'):    
-    col1, col2 = st.columns([4,20])
-    query_text = curr_df.query_text.values[0]
-    document = curr_df.document.values[0]
+    col1, col2, col3 = st.columns([4,15, 15])
+    query_text = curr_df.query_text.values[0].strip()
+    query_text_tr = curr_df.query_text_tr.values[0].strip()
+    document = curr_df.document.values[0].strip()
+    document_tr = curr_df.document_tr.values[0].strip()
 
     col1.write('**ID**')
     if 'ST' in q_id:
@@ -135,10 +146,18 @@ with st.form(key='my_form'):
         color = '#fdc3cd'
     col2.markdown('<span style="%s: %s"><b>%s</b></span>' %('background-color', color, q_id), 
                  unsafe_allow_html=True)
-    col1.write('**Search query**')
-    col2.write(query_text)
-    col1.write('**Search result**')
-    col2.write(document)
+    col3.markdown("")
+    with st.container():
+        col1, col2, col3 = st.columns([4,15, 15])
+        col1.write('**Search query**')
+        col2.write(query_text)
+        col3.write(f"*{query_text_tr}*")
+    with st.container():
+        col1, col2, col3 = st.columns([4,15, 15])
+        col1.write('**Search result**')
+        col2.write(document)
+        document_tr = re.sub("\*", "", document_tr)
+        col3.write(f"*{document_tr}*")        
 
     is_relevant_opt = st.radio(
         label="Do you think this result should be returned when you search the given query?",
@@ -149,7 +168,20 @@ with st.form(key='my_form'):
         Select "No" otherwise.')
     
     words = tokenize.get_tokens(document, lang=curr_df.lang.values[0])
-
+    words_tr = str(curr_df.keywords_tr.values)
+    words_tr = re.sub("[\[\]]", '', words_tr)
+    words_tr = [re.sub("[\'\"]", "", word) for word in words_tr.split(",")]
+    
+    words_combined = []
+    for word, word_tr in zip(words, words_tr):
+        word = word.strip()
+        word_tr = word_tr.strip()
+        if word == word_tr:
+            comb = word
+        else:
+            comb = "%s (%s)" % (word, word_tr)
+        words_combined.append(comb)
+    
     rel_words_sel = st.multiselect(
         label='Keep only the words you think are the most relevant while considering the given query.',
         help='The following words are from the search result. The system \
@@ -157,7 +189,7 @@ with st.form(key='my_form'):
         of similar words in the query and the result document. \
         From the list of words below, remove irrelevant words and \
         retain only the most relevant words.', \
-        options=words, default=words)
+        options=words_combined, default=words_combined)
     
     submit_button = st.form_submit_button(label='Submit', 
                                           help='Click to submit your changes')                 

@@ -1,2 +1,5 @@
 streamlit
 pandas
+*.ipynb_checkpoints/
+*.ipynb
+util/__pycache__/
