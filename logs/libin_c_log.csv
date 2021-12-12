@@ -1,1 +1,21 @@
 q_id, query, is_relevant, rel_words
+ST_021, Falsche Fahrwarnung, Yes, integrated: collision: detection: triggering: safety: features: airbags: seat: belts: fact: triggered: within: milliseconds: impact: achieved: integrating: vehicles: surround: sensors: mechanism: passive: systems: accident: used: make: crash: algorithms: sensitive: impacts: way: severity: early: accurately: result: restraint: devices: activated: sooner: reliably: risk: injuries: occupants: reduced: significantly
+CT_021, Falsche Fahrwarnung, Yes, rear: cross: traffic: warning: backing: parking: space: easier: view: obstructed: warns: crossing: vehicles
+ST_022, Wrong way driving warning, Yes, automatischen: spurwechsel: geschwindigkeitsbereich: km/h: ergänzt: überwachung: seitlichen: rückwärtigen: verkehrs: eck-radarsensoren: fahrer: signalisiert: betätigen: blinkers: system: gefahrlos: nebenspur: gewechselt: fahrverantwortung: fahrzeugführung
+CT_022, Wrong way driving warning, Yes, querverkehrswarnung: versperrter: rückwärtige: ausparken: querparklücken: warnt: querenden: fahrzeugen
+ST_023, Kreuzung sassistenten, Yes, complex: intersection: scenarios: dangerous: situations: impaired: visibility: stationary: traffic: warn: driver: vision: warned: good: time: risk: collision: intersecting: passed: vehicle: yielding: right: way: journey
+CT_023, Kreuzung sassistenten, Yes, rear: cross: traffic: warning: backing: parking: space: obstructed: warns: crossing: vehicles
+ST_024, Electronic stability control, Yes, elektrolenkung: unterstützt: lenkung: fahrzeugen: elektronisch: gesteuerten: elektromotors: elektronische: fail-operational: hochautomatisierte: fahren: gemäß
+CT_024, Electronic stability control, Yes, elektronische: stabilitäts-programm: schleuderbewegungen: fahrzeugs: aktiv
+ST_025, Oxygen Sensors, No, skalierbare: fuel: cell: power: stromerzeugung: fahrzeug
+CT_025, Oxygen Sensors, No, bosch: mems-sensoren: spielen: große: rolle: dabei: mobilität: effizienter: bequemer: sicherer: darüber: hinaus: fahrspaß: begeisterung: steigern: grundbaustein: vernetzte: welt: verborgenen: wirkenden: helden: zeigen: superfähigkeiten: darum: geht: kleinsten: veränderungen: umgebung: erfassen: genauigkeit: messungen: sorgen: dafür: system: immer: laufenden
+ST_026, Motordrehzahlsensor, Yes, speed: sensor: rotational: exhaust-gas: turbochargers
+CT_026, Motordrehzahlsensor, Yes, crankshaft: speed: sensor: engine: management: system: measures: position: rotational: direction
+ST_027, Engine Speed Sensor, Yes, optimale: motorsteuerung: antriebsstrang: sensoren: kurbelwellen-drehzahlsensors: elektronische: motorsteuergerät: drehzahl: position: optional: drehrichtung: kurbelwelle: steuerung: einspritz-: und/oder: zündzeitpunkt: emissionsgrenzwerten: komfort: motorlauf
+CT_027, Engine Speed Sensor, Yes, drehzahlsensor: drehzahl: abgasturboladern: eingangsgröße: steuerung: aufladesystems
+ST_028, Mass Air Flow Sensor, Yes, messprinzip: druckbasierten: luftmassenmessers: staurohrs: sensor: drucksensoren: temperaturfühler: dynamische: druck: statische: temperatur: vorbeiströmenden: luft: luftmasse: luftmassenmesser: gehäuse: messrohr: ragt
+CT_028, Mass Air Flow Sensor, Yes, saugrohrluftdruck-: -temperatursensor: druck: lufttemperatur: saugrohr: mikromechanische: sensor: enthält: piezoresistives: sensorelement: elektrische: spannung: luftdruck: optimiertes: kraftstoff-luft-gemisch: effizientere: verbrennung
+ST_029, Kurbelwellensensor, No, speed: sensor: detects: rotational: exhaust-gas: turbochargers
+CT_029, Kurbelwellensensor, No, robust: crin-le: common-rail: injector: injects: exactly: right: amount: fuel: required: efficient: combustion: cylinder: high-pressure: accumulator: integrated: allows: flexible: engine: design: provided: every: power: output: within: range: kw/cylinder
+ST_030, Crankshaft Sensor, Yes, klopfsensor: kurbelgehäuse: körperschall: piezoelektrischen: messelement: klopfende: verbrennungen: sensor: typischen: schallfrequenzen: klopfgeräusche: motorsteuergerät: zündzeitpunkt: entsprechend
+CT_030, Crankshaft Sensor, No, bremsbelagverschleißsensor: informiert: fahrer: genau: aktuellen: verschleiß: bremsbeläge: fahrzeugs
