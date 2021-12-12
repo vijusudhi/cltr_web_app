@@ -4,3 +4,4 @@ CT_011, Müdigkeitserkennung des Fahrers, No, driver: drowsiness: detection: suc
 ST_012, Hill descent control, No, acc: lässt: ab: geschwindigkeit: etwa: stundenkilometern: aktivieren: unterstützt: fahrer: überlandfahrten: autobahn: variante: stop: go: geschwindigkeiten: stundenkilometer: aktiv: gewählten: abstand: vorausfahrenden: fahrzeug: niedriger: einhalten: selbsttätig: stillstand: abbremsen: weise: dichtem: verkehr: stau: entlasten
 CT_012, Hill descent control, No, hill: assist-technologie: erleichtert: anfahren: manövrieren: gefällen: gefälle: verhindert: assist: ungefähr: sekunden: zurückrollen: fahrzeugs: zeit: brems-: gaspedal: wechseln
 ST_013, Bergabfahr kontrolle, No, precise: inertial: measurement: sensors: provide: reliable: data: functions: chassis: controllers: electronic: braking: systems
+CT_013, Bergabfahr kontrolle, No, mountain: driving: scenario: system: projects: image: oncoming: vehicles: obstruction: hidden: beyond: curve
