@@ -65,7 +65,7 @@ message_field = st.sidebar.empty()
 btn_yes_field = st.sidebar.empty()
 
 if not username or not password or not group:
-    message_field.info('You have not entered either of these - username, password, group. Please try again!')
+    message_field.info('You have not entered a username or a group. Please try again!')
     st.stop()
     
 if '_' in username:
