@@ -11,3 +11,4 @@ ST_005, Nachtsicht im Auto, No, indication: lamp: located: around: door: mirror:
 CT_005, Nachtsicht im Auto, No, 
 ST_006, Blind spot monitor, Yes, 180°-videokamera (180 ° video camera): sehen (seeing): umgebung (surroundings): parksensoren (parking sensors): kamerabild (camera image)
 CT_006, Blind spot monitor, Yes, totwinkelwarner (blind spot warning): fahrzeuge (vehicles): einsehbaren (visible): bereichen (areas): gefahr (danger): fahrer (driver)
+ST_007, Toter Winkel Monitor, Yes, autonomous: driving: mode: sensors: monitor: 360° (360 °): surveillance: lidars: long-range: laser: scanners: radar: medium-range: corner: digital: cameras: 180° (180 °): ultrasound: belt
