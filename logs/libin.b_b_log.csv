@@ -17,3 +17,4 @@ ST_018, Tire pressure monitoring, Yes, reifen (tire): reifenventil (tire valve):
 CT_018, Tire pressure monitoring, Yes, saugrohrluftdruck- (intake manifold air pressure): -temperatursensor (temperature sensor): misst (measures): druck (pressure): lufttemperatur (air temperature): saugrohr (intake manifold): mikromechanische (micromechanical): sensor: piezoresistives (piezoresistive): sensorelement (sensor element): elektrische (electrical): spannung (voltage): luftdruck (air pressure): kraftstoff-luft-gemisch (fuel-air mixture): verbrennung (combustion)
 ST_019, Traktions steuersystem, Yes, accelerator-pedal: position: system: engine: torque: cruise: control: active: safety: systems: electronic: stability: program
 CT_019, Traktions steuersystem, Yes, traction: control: system: tcs: heating: equipment: split-μ
+ST_020, Traction control system, No, 
