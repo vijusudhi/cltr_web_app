@@ -14,3 +14,4 @@ CT_016, Spur zentrierung, No, lane: centering: assist: uses: multi: purpose: cam
 ST_017, Spurwechsel assistenz, Yes, lane: departure: warning: video: camera: markings: vehicle: driver
 CT_017, Spurwechsel assistenz, Yes, lane: change: assist: radar: sensors: rear: bumper: monitor: car: control: sensor: vehicle
 ST_018, Tire pressure monitoring, Yes, reifen (tire): reifenventil (tire valve): sensor: fahrt (drive)
+CT_018, Tire pressure monitoring, Yes, saugrohrluftdruck- (intake manifold air pressure): -temperatursensor (temperature sensor): druck (pressure): lufttemperatur (air temperature): saugrohr (intake manifold): mikromechanische (micromechanical): sensor: piezoresistives (piezoresistive): sensorelement (sensor element): elektrische (electrical): spannung (voltage): luftdruck (air pressure): optimiertes (optimized): kraftstoff-luft-gemisch (fuel-air mixture): effizientere (more efficient): verbrennung (combustion)
