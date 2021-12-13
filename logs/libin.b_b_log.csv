@@ -18,3 +18,4 @@ CT_018, Tire pressure monitoring, Yes, saugrohrluftdruck- (intake manifold air p
 ST_019, Traktions steuersystem, Yes, accelerator-pedal: position: system: engine: torque: cruise: control: active: safety: systems: electronic: stability: program
 CT_019, Traktions steuersystem, Yes, traction: control: system: tcs: heating: equipment: split-μ
 ST_020, Traction control system, No, 
+CT_020, Traction control system, No, 
