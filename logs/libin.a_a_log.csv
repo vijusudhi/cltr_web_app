@@ -6,3 +6,4 @@ CT_002, Zündschloss geräte, No,
 ST_003, Anti lock braking system, Yes, antiblockiersystem (antiblocking system): abs: blockieren (blocking): räder (wheels): sicheres (safe): bremsen (braking)
 CT_003, Anti lock braking system, Yes, antiblockiersystem (anti-lock braking system): sicheren (safe): bremsen (braking): bremswege (braking distances): sturzgefahr (risk of falling): abrupten (abrupt): bremsmanövern (braking maneuvers)
 ST_004, Automotive night vision, Yes, kamera (camera): lichtquellen (light sources): automatisch (automatically): abblend- (low beam): fernlicht (high beam): lichtverhältnissen (lighting conditions): fahrzeugen (vehicles): fernlichtes (high beam): sicherheit (safety)
+CT_004, Automotive night vision, Yes, off-highway: vision: system: kameras (cameras): steuereinheit (control unit): sichtbereiche (viewing areas): rundumsicht (all-round view): fahrzeugs (vehicle): sicheres (safe): schnelles (fast)
