@@ -15,3 +15,4 @@ ST_007, Toter Winkel Monitor, No, autonomous: driving: mode: activated: set: sen
 CT_007, Toter Winkel Monitor, No, steering-angle: sensor: fixed: onto: steering: shaft: hub: gear: wheel: transmits: rotary: movement: two: measuring: wheels: magnet: mounted: whose: field: changes: direction: accordance: rotational: gmr: element: located: detect: angle: position: analog: values: elements: converted: digital: information: directly: circuit: sent: microprocessor: via: serial: interface
 ST_008, Collision avoidance system, Yes, automated: valet: sensorik (sensors): parking
 CT_008, Collision avoidance system, Yes, anfahrinformationssystem (approach information system): kollisionen (collisions): nutzfahrzeugen (commercial vehicles): verkehrsteilnehmern (road users): kraftfahrzeug (motor vehicle)
+ST_009, Kollisionsvermeidungs system, Yes, automatic: emergency: braking: cyclists: warning: predictive: pedestrian: bosch: assistance: urban
