@@ -13,3 +13,4 @@ ST_016, Spur zentrierung, Yes, circular: parking: meeting: room: run-up: acceler
 CT_016, Spur zentrierung, No, lane: centering: assist: uses: multi: purpose: camera: generation: detect: boundaries: – (-): including: road: markings: structural: alongside: vehicle: compare: position: afterwards: system: aligns: keep: track: making: active: interventions: ensure: stays: center
 ST_017, Spurwechsel assistenz, Yes, lane: departure: warning: video: camera: markings: vehicle: driver
 CT_017, Spurwechsel assistenz, Yes, lane: change: assist: radar: sensors: rear: bumper: monitor: car: control: sensor: vehicle
+ST_018, Tire pressure monitoring, Yes, reifen (tire): reifenventil (tire valve): sensor: fahrt (drive)
