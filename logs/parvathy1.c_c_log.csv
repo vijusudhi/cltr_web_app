@@ -7,3 +7,4 @@ ST_023, Kreuzung sassistenten, Yes, intersection: impaired: visibility: stationa
 CT_023, Kreuzung sassistenten, No, rear: cross: traffic: warning: makes: backing: parking: space: easier: view: obstructed: warns: crossing: vehicles
 ST_024, Electronic stability control, Yes, elektrolenkung (electric steering): servolectric® (servolectricÂ®): fahrzeugen (vehicles): elektromotors (electric motor): hochautomatisierte (highly automated): fahren (drive)
 CT_024, Electronic stability control, Yes, elektronische (electronic): stabilitäts-programm (stability program): schleuderbewegungen (skidding movements): fahrzeugs (vehicle): entgegen (counteracts)
+ST_025, Oxygen Sensors, No, skalierbare (scalable): fuel: cell: power: module: brennstoffzellensystem (fuel cell system): stromerzeugung (electricity generation): fahrzeug (vehicle): wasserstoff (hydrogen)
