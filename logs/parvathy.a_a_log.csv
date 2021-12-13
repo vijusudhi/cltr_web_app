@@ -17,3 +17,4 @@ ST_008, Collision avoidance system, Yes, automated: valet: sensorik (sensors): p
 CT_008, Collision avoidance system, Yes, anfahrinformationssystem (approach information system): kollisionen (collisions): nutzfahrzeugen (commercial vehicles): verkehrsteilnehmern (road users): kraftfahrzeug (motor vehicle)
 ST_009, Kollisionsvermeidungs system, Yes, automatic: emergency: braking: cyclists: warning: predictive: pedestrian: bosch: assistance: urban
 CT_009, Kollisionsvermeidungs system, Yes, intelligent: forward: collision: warning: radar: front: blinking: detection: indicator: sounding: audible: alert
+ST_010, Driver drowsiness detection, Yes, fahrerbeobachtungskamera (driver observation camera): fahrers (driver): ablenkung (distraction): müdigkeit (tiredness)
