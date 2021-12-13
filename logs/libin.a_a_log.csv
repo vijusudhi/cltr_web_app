@@ -1,3 +1,4 @@
 q_id, query, is_relevant, rel_words
 ST_001, ignition interlock devices, No, 
 CT_001, ignition interlock devices, No, 
+ST_002, Zündschloss geräte, Yes, secures: vehicle: theft: transponder: code: ignition: key: smart: intelligent: communications: interface: engine: electronics: system
