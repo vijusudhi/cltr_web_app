@@ -1,2 +1,3 @@
 q_id, query, is_relevant, rel_words
 ST_011, Müdigkeitserkennung des Fahrers, Yes, monitoring: camera: drowsiness
+CT_011, Müdigkeitserkennung des Fahrers, Yes, drowsiness: detection: sensors: steering-angle: sensor
