@@ -1,3 +1,4 @@
 q_id, query, is_relevant, rel_words
 ST_011, Müdigkeitserkennung des Fahrers, Yes, driver: monitoring: camera: monitors: alertness: condition: distraction: drowsiness: microsleeps: alert
 CT_011, Müdigkeitserkennung des Fahrers, Yes, driver: drowsiness: detection: pure: software: solution: additional: sensors: steering-angle: sensor: integrated: vehicle: legal: requirements
+ST_012, Hill descent control, Yes, acc: geschwindigkeit (speed): stundenkilometern (hourly kilometers): fahrer (driver): überlandfahrten (overland drives): autobahn: stop: go: geschwindigkeiten (speeds): stundenkilometer (kilometers per hour): abstand (distance): vorausfahrenden (ahead): fahrzeug (vehicle): selbsttätig (automatic): stillstand (standstill): abbremsen (slow down)
