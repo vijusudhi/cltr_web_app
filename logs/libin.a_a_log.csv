@@ -10,3 +10,4 @@ CT_004, Automotive night vision, Yes, off-highway: vision: system: kameras (came
 ST_005, Nachtsicht im Auto, No, indication: lamp: located: around: door: mirror: lights: system: detects: vehicle: blind: spot: area: driver: flicks: turn: signal: time: starts: flash: audible: warning: help: alert
 CT_005, Nachtsicht im Auto, No, 
 ST_006, Blind spot monitor, Yes, 180°-videokamera (180 ° video camera): sehen (seeing): umgebung (surroundings): parksensoren (parking sensors): kamerabild (camera image)
+CT_006, Blind spot monitor, Yes, totwinkelwarner (blind spot warning): fahrzeuge (vehicles): einsehbaren (visible): bereichen (areas): gefahr (danger): fahrer (driver)
