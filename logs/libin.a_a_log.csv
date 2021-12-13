@@ -8,3 +8,4 @@ CT_003, Anti lock braking system, Yes, antiblockiersystem (anti-lock braking sys
 ST_004, Automotive night vision, Yes, kamera (camera): lichtquellen (light sources): automatisch (automatically): abblend- (low beam): fernlicht (high beam): lichtverhältnissen (lighting conditions): fahrzeugen (vehicles): fernlichtes (high beam): sicherheit (safety)
 CT_004, Automotive night vision, Yes, off-highway: vision: system: kameras (cameras): steuereinheit (control unit): sichtbereiche (viewing areas): rundumsicht (all-round view): fahrzeugs (vehicle): sicheres (safe): schnelles (fast)
 ST_005, Nachtsicht im Auto, No, indication: lamp: located: around: door: mirror: lights: system: detects: vehicle: blind: spot: area: driver: flicks: turn: signal: time: starts: flash: audible: warning: help: alert
+CT_005, Nachtsicht im Auto, No, 
