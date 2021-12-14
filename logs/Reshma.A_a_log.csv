@@ -15,3 +15,4 @@ ST_007, Toter Winkel Monitor, No,
 CT_007, Toter Winkel Monitor, No, 
 ST_008, Collision avoidance system, Yes, automated: automatisierte (automated): sensorik (sensors): erkennt (detects): fahrzeug (vehicle): hindernis (obstacle)
 CT_008, Collision avoidance system, Yes, kollisionen (collisions): vermeiden (avoid)
+ST_009, Kollisionsvermeidungs system, Yes, automatic: braking: warning: predictive: smart
