@@ -10,3 +10,4 @@ CT_004, Automotive night vision, No,
 ST_005, Nachtsicht im Auto, No, 
 CT_005, Nachtsicht im Auto, No, 
 ST_006, Blind spot monitor, No, 
+CT_006, Blind spot monitor, Yes, totwinkelwarner (blind spot warning): erkennt (detects): schlecht (bad): einsehbaren (visible): bereichen (areas): warnt (warns): gefahr (danger): optischen (optical)
