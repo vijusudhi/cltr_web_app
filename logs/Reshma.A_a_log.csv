@@ -9,3 +9,4 @@ ST_004, Automotive night vision, Yes, kamera (camera): erkennen (detect): lichtv
 CT_004, Automotive night vision, No, 
 ST_005, Nachtsicht im Auto, No, 
 CT_005, Nachtsicht im Auto, No, 
+ST_006, Blind spot monitor, Yes, einparkhilfe (parking aid): sehen (seeing): parken (parking): umgebung (surroundings): parksensoren (parking sensors): kamerabild (camera image)
