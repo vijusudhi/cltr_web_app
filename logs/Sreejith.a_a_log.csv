@@ -7,3 +7,4 @@ ST_003, Anti lock braking system, Yes, antiblockiersystem (antiblocking system):
 CT_003, Anti lock braking system, Yes, antiblockiersystem (anti-lock braking system): hilft (helps): sicheren (safe): bremsen (braking): verkürzte (shortened): bremswege (braking distances): verringerte (reduced): sturzgefahr (risk of falling): abrupten (abrupt): bremsmanövern (braking maneuvers)
 ST_004, Automotive night vision, Yes, kamera (camera): oberseite (top): windschutzscheibe (windshield): lichtquellen (light sources): erkennen (detect): system: wechselt (changes): automatisch (automatically): abblend- (low beam): fernlicht (high beam): lichtverhältnissen (lighting conditions): fahrzeugen (vehicles): anzupassen (adapt): nutzungsdauer (service life): fernlichtes (high beam): optimieren (optimize): maximale (maximum): sicherheit (safety)
 CT_004, Automotive night vision, No, 
+ST_005, Nachtsicht im Auto, No, 
