@@ -5,3 +5,4 @@ CT_001, ignition interlock devices, No, kühlmittel-schaltventile (coolant switc
 ST_002, Zündschloss geräte, No, electronic: immobilizer: secures: vehicle: theft: achieved: transponder: code: ignition: key: switched: read: smartra: smart: intelligent: communications: interface: using: antenna: valid: releases: engine: electronics: system: another: coded: signal: required: start
 CT_002, Zündschloss geräte, No, 
 ST_003, Anti lock braking system, Yes, antiblockiersystem (antiblocking system): abs: blockieren (blocking): räder (wheels): ermöglicht (enables): sicheres (safe): bremsen (braking)
+CT_003, Anti lock braking system, Yes, antiblockiersystem (anti-lock braking system): hilft (helps): beim (with): sicheren (safe): bremsen (braking): sorgt (provides): verkürzte (shortened): bremswege (braking distances): verringerte (reduced): sturzgefahr (risk of falling): abrupten (abrupt): bremsmanövern (braking maneuvers)
