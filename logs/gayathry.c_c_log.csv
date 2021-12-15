@@ -5,3 +5,4 @@ ST_022, Wrong way driving warning, No, bosch (Bosch): fahrassistent (driving ass
 CT_022, Wrong way driving warning, Yes, querverkehrswarnung (Cross traffic warning): versperrter (blocked): rückwärtige (backwards): ausparken (park out): querparklücken (cross parking spaces): fahrzeugen (vehicles)
 ST_023, Kreuzung sassistenten, Yes, intersection: scenarios: dangerous: situations: stationary: traffic: buildings: v2x: driver: good: time: risk: collision: intersecting: vehicle: right: journey
 CT_023, Kreuzung sassistenten, Yes, rear: cross: traffic: warning: parking: space: warns: vehicles
+ST_024, Electronic stability control, Yes, elektrolenkung (electric steering): servolectric® (servolectricÂ®): lenkung (steering): fahrzeugen (vehicles): elektronisch (electronic): elektromotors (electric motor): elektronische (electronic): schnittstelle (interface): fail-operational: ausführung (execution): hochautomatisierte (highly automated): gemäß (according to)
