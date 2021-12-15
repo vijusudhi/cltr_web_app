@@ -7,3 +7,4 @@ ST_023, Kreuzung sassistenten, Yes, intersection: scenarios: dangerous: situatio
 CT_023, Kreuzung sassistenten, Yes, rear: cross: traffic: warning: parking: space: warns: vehicles
 ST_024, Electronic stability control, Yes, elektrolenkung (electric steering): servolectric® (servolectricÂ®): lenkung (steering): fahrzeugen (vehicles): elektronisch (electronic): elektromotors (electric motor): elektronische (electronic): schnittstelle (interface): fail-operational: ausführung (execution): hochautomatisierte (highly automated): gemäß (according to)
 CT_024, Electronic stability control, Yes, stabilitäts-programm (stability program): erkennt (detects): schleuderbewegungen (skidding movements): fahrzeugs (vehicle): entgegen (counteracts)
+ST_025, Oxygen Sensors, Yes, skalierbare (scalable): fuel: cell: power: module: fahrzeug (vehicle): wasserstoff (hydrogen)
