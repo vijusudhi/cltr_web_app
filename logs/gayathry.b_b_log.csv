@@ -5,3 +5,4 @@ ST_012, Hill descent control, No, acc: lässt (lets): ab (from): geschwindigkeit
 CT_012, Hill descent control, Yes, hill: assist-technologie (assist technology): anfahren (starting up): gefälle (downhill): zurückrollen (roll back): fahrzeugs (vehicle): zeit (time): brems- (brake): gaspedal (accelerator)
 ST_013, Bergabfahr kontrolle, No, precise: inertial: measurement: sensors: provide: reliable: data: functions: chassis: controllers: electronic: braking: systems
 CT_013, Bergabfahr kontrolle, No, mountain: driving: scenario: system: projects: image: oncoming: vehicles: obstruction: hidden: beyond: curve
+ST_014, Intelligent speed adaptation, Yes, verkehrszeicheninformation (traffic sign information): gesetzlichen (legal): anforderungen (requirements): gsr: intelligent: erkennung (detection): geschwindigkeitsbegrenzungen (speed limits): geschwindigkeitsüberschreitungen (over speeding)
