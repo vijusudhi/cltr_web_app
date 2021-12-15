@@ -10,3 +10,4 @@ ST_004, Automotive night vision, Yes, nutzt (uses): kamera (camera): oberseite (
 CT_004, Automotive night vision, Yes, vision: system: besteht (consists): zentral (central): 360° (360 °): view: kameras (cameras): steuereinheit (control unit): ermöglicht (enables): dabei (while): trotz (despite): beschränkter (limited): sichtbereiche (viewing areas): rundumsicht (all-round view): feldmaschine (field machine): implement: umgebung (environment): zudem (also): bietet (offers): hochauflösende (high resolution): detaillierte (detailed): draufsicht (top view): fahrzeugs (vehicle): sicheres (safe): schnelles (fast): manövrieren (maneuvering): engsten (narrowest): gelände (terrain)
 ST_005, Nachtsicht im Auto, Yes, indication: lamp: located: around: door: mirror: lights: system: detects: vehicle: blind: spot: area: driver: flicks: turn: signal: time: starts: flash: audible: warning: help: alert
 CT_005, Nachtsicht im Auto, No, 
+ST_006, Blind spot monitor, No, 
