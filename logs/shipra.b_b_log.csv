@@ -1,1 +1,2 @@
 q_id, query, is_relevant, rel_words
+ST_011, Müdigkeitserkennung des Fahrers, Yes, driver: monitoring: monitors: alertness: detect: drowsiness: alert
