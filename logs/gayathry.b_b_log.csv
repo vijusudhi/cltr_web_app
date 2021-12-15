@@ -8,3 +8,4 @@ CT_013, Bergabfahr kontrolle, No, mountain: driving: scenario: system: projects:
 ST_014, Intelligent speed adaptation, Yes, verkehrszeicheninformation (traffic sign information): gesetzlichen (legal): anforderungen (requirements): gsr: intelligent: erkennung (detection): geschwindigkeitsbegrenzungen (speed limits): geschwindigkeitsüberschreitungen (over speeding)
 CT_014, Intelligent speed adaptation, Yes, abstands- (distance control): geschwindigkeit (speed): verkehrsfluss (traffic flow)
 ST_015, Intelligente Geschwindigkeitsanpassung, Yes, detection: speed: velocity: limits: sla: intelligent: assist: isa: control: limit: traffic: recognition
+CT_015, Intelligente Geschwindigkeitsanpassung, Yes, road: conditions: feedback
