@@ -15,3 +15,4 @@ CT_006, Blind spot monitor, Yes, totwinkelwarner (blind spot warning): erkennt (
 ST_007, Toter Winkel Monitor, No, driving: mode: activated: set: sensors: monitor: road: provide: vehicle: lidars: laser: scanners: frontal: radar: medium-range: corner: digital: cameras: 180° (180 °): belt
 CT_007, Toter Winkel Monitor, No, 
 ST_008, Collision avoidance system, Yes, automated: valet: parking: fahrzeughersteller (vehicle manufacturer): schon (already): automatisierte (automated): fahrerlebnis (driving experience): bieten (provide): system: stützt (supports): infrastruktur (infrastructure): eingesetzte (deployed): sensorik (sensors): fußgänger (pedestrians): objekte (objects): fahrweg (route): erkennt (detects): kommt (coming): fahrzeug (vehicle): hindernis (obstacle): zuverlässig (reliable): stehen (standing)
+CT_008, Collision avoidance system, Yes, vermeiden (avoid): kraftfahrzeug (motor vehicle): kollisionen (collisions): hilft (helps)
