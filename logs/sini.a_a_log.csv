@@ -12,3 +12,4 @@ ST_005, Nachtsicht im Auto, Yes, indication: lamp: located: around: door: mirror
 CT_005, Nachtsicht im Auto, No, 
 ST_006, Blind spot monitor, No, 
 CT_006, Blind spot monitor, Yes, totwinkelwarner (blind spot warning): erkennt (detects): fahrzeuge (vehicles): schlecht (bad): einsehbaren (visible): bereichen (areas): warnt (warns): gefahr (danger): fahrer (driver): optischen (optical): signal
+ST_007, Toter Winkel Monitor, No, driving: mode: activated: set: sensors: monitor: road: provide: vehicle: lidars: laser: scanners: frontal: radar: medium-range: corner: digital: cameras: 180° (180 °): belt
