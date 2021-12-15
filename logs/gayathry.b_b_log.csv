@@ -16,3 +16,4 @@ CT_017, Spurwechsel assistenz, No, lane: change: assist: works: using: two: corn
 ST_018, Tire pressure monitoring, Yes, reifen (tire): reifenventil (tire valve): sensor: fahrt (drive): regelmäßig (regularly)
 CT_018, Tire pressure monitoring, No, saugrohrluftdruck- (intake manifold air pressure): -temperatursensor (temperature sensor): druck (pressure): lufttemperatur (air temperature): mikromechanische (micromechanical): ausübung (exercise): messbare (measurable): elektrische (electrical): spannung (voltage): luftdruck (air pressure): gemessen (measured): kraftstoff-luft-gemisch (fuel-air mixture)
 ST_019, Traktions steuersystem, Yes, accelerator-pedal: requirements: engine: torque: cruise: safety: systems: electronic: stability: esp®
+CT_019, Traktions steuersystem, Yes, traction: system: tcs: slopes: heating: equipment: split-μ: conditions
