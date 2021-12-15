@@ -5,3 +5,4 @@ ST_002, Zündschloss geräte, Yes, immobilizer: vehicle: transponder: code: igni
 CT_002, Zündschloss geräte, No, conveyor: belts: special: transport: bulk: material: mobile: machinery
 ST_003, Anti lock braking system, Yes, antiblockiersystem (antiblocking system): abs: blockieren (blocking): räder (wheels): bremsen (braking)
 CT_003, Anti lock braking system, Yes, antiblockiersystem (anti-lock braking system): sicheren (safe): bremsen (braking): bremswege (braking distances): sturzgefahr (risk of falling): abrupten (abrupt): bremsmanövern (braking maneuvers)
+ST_004, Automotive night vision, Yes, peugeot: kamera (camera): windschutzscheibe (windshield): lichtquellen (light sources): system: automatisch (automatically): abblend- (low beam): fernlicht (high beam): lichtverhältnissen (lighting conditions): fahrzeugen (vehicles): nutzungsdauer (service life): fernlichtes (high beam): sicherheit (safety)
