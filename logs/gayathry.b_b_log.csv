@@ -10,3 +10,4 @@ CT_014, Intelligent speed adaptation, Yes, abstands- (distance control): geschwi
 ST_015, Intelligente Geschwindigkeitsanpassung, Yes, detection: speed: velocity: limits: sla: intelligent: assist: isa: control: limit: traffic: recognition
 CT_015, Intelligente Geschwindigkeitsanpassung, Yes, road: conditions: feedback
 ST_016, Spur zentrierung, Yes, circular: area: parking: meeting: room: acceleration: driving: circle: markings: different: course
+CT_016, Spur zentrierung, Yes, centering: assist: camera: generation: boundaries: including: vehicle: position: interventions: center
