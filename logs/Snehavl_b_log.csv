@@ -6,3 +6,4 @@ CT_012, Hill descent control, No,
 ST_013, Bergabfahr kontrolle, No, 
 CT_013, Bergabfahr kontrolle, No, 
 ST_014, Intelligent speed adaptation, Yes, verkehrszeicheninformation (traffic sign information): optimiert (optimized): unterstützt (supported): system: safety: regulation: gsr: intelligent: speed: limit: assist: erkennung (detection): geschwindigkeitsbegrenzungen (speed limits): warnung (warning): geschwindigkeitsüberschreitungen (over speeding)
+CT_014, Intelligent speed adaptation, Yes, adaptive: abstands- (distance control): geschwindigkeitsregelung (speed control): passt (fits): geschwindigkeit (speed): verkehrsfluss (traffic flow)
