@@ -16,3 +16,4 @@ CT_017, Spurwechsel assistenz, Yes, lane: change: assist: corner: radar: sensors
 ST_018, Tire pressure monitoring, Yes, reifen (tire): sensor: regelmäßig (regularly)
 CT_018, Tire pressure monitoring, No, 
 ST_019, Traktions steuersystem, No, 
+CT_019, Traktions steuersystem, No, 
