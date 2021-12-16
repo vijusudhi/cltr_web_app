@@ -4,3 +4,4 @@ CT_011, Müdigkeitserkennung des Fahrers, Yes, driver: drowsiness: detection: st
 ST_012, Hill descent control, No, 
 CT_012, Hill descent control, Yes, hill: assist-technologie (assist technology): gefällen (downhill): gefälle (downhill): verhindert (prevented): assist: ungefähr (approximately): zurückrollen (roll back): fahrzeugs (vehicle): zeit (time): brems- (brake)
 ST_013, Bergabfahr kontrolle, No, 
+CT_013, Bergabfahr kontrolle, No, 
