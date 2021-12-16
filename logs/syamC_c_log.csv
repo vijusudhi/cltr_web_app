@@ -18,3 +18,4 @@ CT_028, Mass Air Flow Sensor, Yes, saugrohrluftdruck- (intake manifold air press
 ST_029, Kurbelwellensensor, Yes, speed: sensor: detects: rotational: exhaust-gas: turbochargers
 CT_029, Kurbelwellensensor, Yes, robust: crin-le: common-rail: injector: injects: fuel: combustion: cylinder: high-pressure: accumulator: integrated: flexible: engine: design: power: output: range
 ST_030, Crankshaft Sensor, Yes, klopfsensor (knock sensor): direkt (direct): kurbelgehäuse (crankcase): montiert (mounted): misst (measures): körperschall (structure-borne noise): piezoelektrischen (piezoelectric): messelement (measuring element): verbrennungen (burns): sensor: typischen (typical): höheren (higher): schallfrequenzen (sound frequencies): klopfgeräusche (knocking noises): zündzeitpunkt (ignition point): entsprechend (corresponding)
+CT_030, Crankshaft Sensor, Yes, informiert (informs): fahrer (driver): verschleiß (wear): bremsbeläge (brake pads): fahrzeugs (vehicle)
