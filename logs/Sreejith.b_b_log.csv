@@ -3,3 +3,4 @@ ST_011, Müdigkeitserkennung des Fahrers, Yes, driver: monitoring: camera: monit
 CT_011, Müdigkeitserkennung des Fahrers, Yes, driver: drowsiness: detection: steering-angle: sensor
 ST_012, Hill descent control, No, 
 CT_012, Hill descent control, Yes, hill: assist-technologie (assist technology): gefällen (downhill): gefälle (downhill): verhindert (prevented): assist: ungefähr (approximately): zurückrollen (roll back): fahrzeugs (vehicle): zeit (time): brems- (brake)
+ST_013, Bergabfahr kontrolle, No, 
