@@ -3,3 +3,4 @@ ST_001, ignition interlock devices, No, system: mikro-mobilitätslösung (micro-
 CT_001, ignition interlock devices, Yes, kühlmittel-schaltventile (coolant switching valves): steuern (control): kühlmitteldurchfluss (coolant flow): nebenkühlkreisläufen (auxiliary cooling circuits): heizkreisläufen (heating circuits)
 ST_002, Zündschloss geräte, Yes, electronic: immobilizer: secures: vehicle: theft: ignition: key: switched: interface: engine
 CT_002, Zündschloss geräte, No, conveyor: belts: special: transport: bulk: material: mobile: machinery
+ST_003, Anti lock braking system, Yes, antiblockiersystem (antiblocking system): abs: räder (wheels): sicheres (safe): bremsen (braking)
