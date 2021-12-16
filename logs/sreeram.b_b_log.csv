@@ -11,3 +11,4 @@ ST_015, Intelligente Geschwindigkeitsanpassung, Yes, detection: implicit: explic
 CT_015, Intelligente Geschwindigkeitsanpassung, Yes, intelligent: speed: assistance: system: assist: driver: maintaining: road: conditions: targeted: feedback
 ST_016, Spur zentrierung, Yes, circular: area: parking: meeting: room: run-up: acceleration: track: testing: braking: maneuvers: lane: driving: circle: markings: provided: different: radii
 CT_016, Spur zentrierung, Yes, lane: centering: assist: multi: purpose: camera: generation: detect: boundaries: road: markings: structural: vehicle: compare: position: afterwards: system: aligns: track: making: active: interventions: ensure: stays: center
+ST_017, Spurwechsel assistenz, Yes, lane: departure: warning: video: camera: detect: markings: ahead: vehicle: warns: driver: leaving
