@@ -10,3 +10,4 @@ CT_014, Intelligent speed adaptation, Yes, adaptive: geschwindigkeitsregelung (s
 ST_015, Intelligente Geschwindigkeitsanpassung, Yes, detection: speed: limitation: signs: inform: driver: maximum: allowed: velocity: conditional: limits: sign: extended: intelligent: assist: adapting: cruise: control: limit: information: traffic: recognition
 CT_015, Intelligente Geschwindigkeitsanpassung, Yes, intelligent: speed: assistance: assist: driver: maintaining: road: targeted: appropriate: feedback
 ST_016, Spur zentrierung, No, 
+CT_016, Spur zentrierung, Yes, lane: centering: assist: camera: generation: detect: boundaries: markings: structural: vehicle: position: track: active: interventions: ensure: stays: center
