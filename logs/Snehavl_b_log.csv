@@ -14,3 +14,4 @@ CT_016, Spur zentrierung, Yes, lane: centering: assist: multi: purpose: camera: 
 ST_017, Spurwechsel assistenz, Yes, lane: warning: video: camera: detect: markings: ahead: vehicle: warns: driver: leaving
 CT_017, Spurwechsel assistenz, Yes, lane: change: assist: two: corner: radar: sensors: concealed: rear: bumper: monitor: area: behind: car: powerful: control: software: collates: sensor: information: traffic: vehicle
 ST_018, Tire pressure monitoring, No, 
+CT_018, Tire pressure monitoring, Yes, saugrohrluftdruck- (intake manifold air pressure): -temperatursensor (temperature sensor): misst (measures): druck (pressure): lufttemperatur (air temperature): saugrohr (intake manifold): sensor: sensorelement (sensor element): messbare (measurable): erzeugt (generated): luftdruck (air pressure): gemessen (measured): sorgt (provides): optimiertes (optimized): kraftstoff-luft-gemisch (fuel-air mixture): effizientere (more efficient): verbrennung (combustion)
