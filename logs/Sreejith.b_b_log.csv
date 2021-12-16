@@ -15,3 +15,4 @@ ST_017, Spurwechsel assistenz, Yes, lane: video: camera: detect: markings: ahead
 CT_017, Spurwechsel assistenz, Yes, lane: change: assist: corner: radar: sensors: concealed: rear: bumper: monitor: area: behind: car: powerful: control: collates: sensor: vehicle
 ST_018, Tire pressure monitoring, Yes, reifen (tire): sensor: regelmäßig (regularly)
 CT_018, Tire pressure monitoring, No, 
+ST_019, Traktions steuersystem, No, 
