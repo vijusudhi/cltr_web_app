@@ -4,3 +4,4 @@ CT_011, Müdigkeitserkennung des Fahrers, Yes, driver: drowsiness: detection: su
 ST_012, Hill descent control, Yes, acc: stundenkilometern (hourly kilometers): aktivieren (activate): unterstützt (assisted): fahrer (driver): überlandfahrten (overland drives): variante (variant): stop: go: geschwindigkeiten (speeds): stundenkilometer (kilometers per hour): aktiv (active): abstand (distance): vorausfahrenden (ahead): fahrzeug (vehicle): niedriger (lower): selbsttätig (automatic): stillstand (standstill): abbremsen (slow down): dichtem (dense): verkehr (traffic): stau (traffic jam): geschwindigkeit (speed)
 CT_012, Hill descent control, No, 
 ST_013, Bergabfahr kontrolle, No, 
+CT_013, Bergabfahr kontrolle, No, 
