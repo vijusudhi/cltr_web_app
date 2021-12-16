@@ -16,3 +16,4 @@ CT_007, Toter Winkel Monitor, No, steering-angle: sensor: fixed: onto: steering:
 ST_008, Collision avoidance system, Yes, automatisierte (automated): sensorik (sensors): fußgänger (pedestrians): objekte (objects): erkennt (detects): hindernis (obstacle): stehen (standing): fahrzeug (vehicle)
 CT_008, Collision avoidance system, Yes, anfahrinformationssystem (approach information system): kollisionen (collisions)
 ST_009, Kollisionsvermeidungs system, Yes, automatic: emergency: braking: car: exit: warning: predictive: pedestrian: protection: protect: pedestrians: risk
+CT_009, Kollisionsvermeidungs system, Yes, forward: collision: warning: detect: distances: well: speed: assess: situation: prompts: driver: detection: indicator: alert: radar: sensor
