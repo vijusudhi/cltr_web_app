@@ -18,3 +18,4 @@ CT_008, Collision avoidance system, Yes, anfahrinformationssystem (approach info
 ST_009, Kollisionsvermeidungs system, No, 
 CT_009, Kollisionsvermeidungs system, Yes, forward: collision: warning: system: radar: sensor: front: vehicle: detect: distances: two: cars: ahead: relative: speed: allows: assess: situation: determines: needs: slow: sudden: change: vehicles: prompts: driver: blinking: detection: indicator: sounding: audible: alert
 ST_010, Driver drowsiness detection, Yes, fahrerbeobachtungskamera (driver observation camera): erfasst (recorded): aufmerksamkeit (attention): fahrers (driver): ablenkung (distraction): müdigkeit (tiredness): fahrer (driver): rechtzeitig (on time): gewarnt (warned)
+CT_010, Driver drowsiness detection, No, 
