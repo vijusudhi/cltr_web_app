@@ -2,3 +2,4 @@ q_id, query, is_relevant, rel_words
 ST_001, ignition interlock devices, No, system: elektrische (electric): antriebssystem (drive system): abgestimmten (coordinated): komponenten (components): unterstützungsfunktionen (support functions): funktionen (functions): motorunterstützung (motor support): automatische (automatic): bremsunterstützung (braking assistance): handhabung (handling): systems: erfolgt (done): intuitiv (intuitive): schalter (switch): griff (handle): bluetooth: zugehörigen (associated): smartphone-app (smartphone app): verbunden (connected)
 CT_001, ignition interlock devices, No, 
 ST_002, Zündschloss geräte, Yes, electronic: immobilizer: secures: vehicle: theft: achieved: transponder: code: ignition: key: switched: intelligent: communications: interface: using: antenna: engine: electronics: system: coded: signal: start
+CT_002, Zündschloss geräte, No, 
