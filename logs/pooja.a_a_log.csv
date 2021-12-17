@@ -4,3 +4,4 @@ CT_001, ignition interlock devices, No,
 ST_002, Zündschloss geräte, Yes, immobilizer: vehicle: theft: transponder: code: ignition: smartra: intelligent: antenna: engine: electronics: system: signal
 CT_002, Zündschloss geräte, No, 
 ST_003, Anti lock braking system, Yes, antiblockiersystem (antiblocking system): räder (wheels): bremsen (braking)
+CT_003, Anti lock braking system, Yes, antiblockiersystem (anti-lock braking system): sicheren (safe): bremsen (braking): verkürzte (shortened): bremswege (braking distances): sturzgefahr (risk of falling): bremsmanövern (braking maneuvers): abrupten (abrupt)
