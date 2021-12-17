@@ -3,3 +3,4 @@ ST_001, ignition interlock devices, No, system: elektrische (electric): antriebs
 CT_001, ignition interlock devices, No, 
 ST_002, Zündschloss geräte, Yes, electronic: immobilizer: secures: vehicle: theft: achieved: transponder: code: ignition: key: switched: intelligent: communications: interface: using: antenna: engine: electronics: system: coded: signal: start
 CT_002, Zündschloss geräte, No, 
+ST_003, Anti lock braking system, Yes, antiblockiersystem (antiblocking system): abs: verhindert (prevents): blockieren (blocking): räder (wheels): ermöglicht (enables): sicheres (safe): bremsen (braking)
