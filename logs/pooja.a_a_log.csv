@@ -16,3 +16,4 @@ CT_007, Toter Winkel Monitor, No,
 ST_008, Collision avoidance system, Yes, automated: parking: fahrzeughersteller (vehicle manufacturer): automatisierte (automated): fahrerlebnis (driving experience): infrastruktur (infrastructure): eingesetzte (deployed): sensorik (sensors): fußgänger (pedestrians): objekte (objects): erkennt (detects): fahrzeug (vehicle): hindernis (obstacle)
 CT_008, Collision avoidance system, Yes, anfahrinformationssystem (approach information system): kollisionen (collisions): schweren (heavy): nutzfahrzeugen (commercial vehicles): verkehrsteilnehmern (road users): unmittelbar (immediate): kraftfahrzeug (motor vehicle)
 ST_009, Kollisionsvermeidungs system, No, 
+CT_009, Kollisionsvermeidungs system, Yes, intelligent: forward: collision: warning: system: sensor: front: vehicle: detect: speed: determines: change: vehicles: driver: detection
