@@ -15,3 +15,4 @@ ST_007, Toter Winkel Monitor, No,
 CT_007, Toter Winkel Monitor, No, 
 ST_008, Collision avoidance system, Yes, system: stützt (supports): eingesetzte (deployed): sensorik (sensors): fußgänger (pedestrians): objekte (objects): fahrweg (route): erkennt (detects): kommt (coming): fahrzeug (vehicle): hindernis (obstacle): zuverlässig (reliable): stehen (standing)
 CT_008, Collision avoidance system, Yes, anfahrinformationssystem (approach information system): kollisionen (collisions): nutzfahrzeugen (commercial vehicles): verkehrsteilnehmern (road users): kraftfahrzeug (motor vehicle): vermeiden (avoid)
+ST_009, Kollisionsvermeidungs system, No, 
