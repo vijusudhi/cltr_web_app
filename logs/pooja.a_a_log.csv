@@ -7,3 +7,4 @@ ST_003, Anti lock braking system, Yes, antiblockiersystem (antiblocking system):
 CT_003, Anti lock braking system, Yes, antiblockiersystem (anti-lock braking system): sicheren (safe): bremsen (braking): verkürzte (shortened): bremswege (braking distances): sturzgefahr (risk of falling): bremsmanövern (braking maneuvers): abrupten (abrupt)
 ST_004, Automotive night vision, No, 
 CT_004, Automotive night vision, No, 
+ST_005, Nachtsicht im Auto, No, 
