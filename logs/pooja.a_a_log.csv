@@ -13,3 +13,4 @@ ST_006, Blind spot monitor, No,
 CT_006, Blind spot monitor, Yes, totwinkelwarner (blind spot warning): erkennt (detects): fahrzeuge (vehicles): einsehbaren (visible): warnt (warns): gefahr (danger): fahrer (driver)
 ST_007, Toter Winkel Monitor, No, 
 CT_007, Toter Winkel Monitor, No, 
+ST_008, Collision avoidance system, Yes, automated: parking: fahrzeughersteller (vehicle manufacturer): automatisierte (automated): fahrerlebnis (driving experience): infrastruktur (infrastructure): eingesetzte (deployed): sensorik (sensors): fußgänger (pedestrians): objekte (objects): erkennt (detects): fahrzeug (vehicle): hindernis (obstacle)
