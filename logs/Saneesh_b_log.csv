@@ -4,3 +4,4 @@ CT_011, Müdigkeitserkennung des Fahrers, No, driver: drowsiness: detection: suc
 ST_012, Hill descent control, No, 
 CT_012, Hill descent control, No, 
 ST_013, Bergabfahr kontrolle, Yes, precise: inertial: measurement: sensors: provide: reliable: data: functions: chassis: controllers: electronic: braking: systems
+CT_013, Bergabfahr kontrolle, No, 
