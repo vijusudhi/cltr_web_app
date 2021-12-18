@@ -3,3 +3,4 @@ ST_011, Müdigkeitserkennung des Fahrers, Yes, driver: monitoring: camera: monit
 CT_011, Müdigkeitserkennung des Fahrers, No, driver: drowsiness: detection: successful: market: years: already: pure: software: solution: without: need: additional: sensors: steering-angle: sensor: thus: easily: integrated: existing: vehicle: platforms: function: suitable: meet: emerging: legal: requirements
 ST_012, Hill descent control, No, 
 CT_012, Hill descent control, No, 
+ST_013, Bergabfahr kontrolle, Yes, precise: inertial: measurement: sensors: provide: reliable: data: functions: chassis: controllers: electronic: braking: systems
