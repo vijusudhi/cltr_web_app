@@ -14,3 +14,4 @@ CT_016, Spur zentrierung, No,
 ST_017, Spurwechsel assistenz, Yes, lane: departure: warning: uses: video: camera: detect: markings: ahead: vehicle: warns: driver: leaving
 CT_017, Spurwechsel assistenz, No, 
 ST_018, Tire pressure monitoring, Yes, reifen (tire): verfügt (has): reifenventil (tire valve): sensor: fahrt (drive): regelmäßig (regularly)
+CT_018, Tire pressure monitoring, No, 
