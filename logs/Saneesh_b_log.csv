@@ -12,3 +12,4 @@ CT_015, Intelligente Geschwindigkeitsanpassung, Yes, intelligent: speed: assista
 ST_016, Spur zentrierung, No, circular: area: includes: parking: meeting: room: run-up: acceleration: track: testing: used: braking: maneuvers: lane: changes: driving: circle: slalom: markings: provided: different: radii: addition: handling: course
 CT_016, Spur zentrierung, No, 
 ST_017, Spurwechsel assistenz, Yes, lane: departure: warning: uses: video: camera: detect: markings: ahead: vehicle: warns: driver: leaving
+CT_017, Spurwechsel assistenz, No, 
