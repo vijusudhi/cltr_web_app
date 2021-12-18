@@ -5,3 +5,4 @@ ST_012, Hill descent control, No,
 CT_012, Hill descent control, No, 
 ST_013, Bergabfahr kontrolle, Yes, precise: inertial: measurement: sensors: provide: reliable: data: functions: chassis: controllers: electronic: braking: systems
 CT_013, Bergabfahr kontrolle, No, 
+ST_014, Intelligent speed adaptation, Yes, leistungsfähigkeit (performance): verkehrszeicheninformation (traffic sign information): zusätzlich (additional): optimiert (optimized): unterstützt (supported): system: künftigen (future): gesetzlichen (legal): anforderungen (requirements): general: safety: regulation: gsr: intelligent: speed: limit: assist: erkennung (detection): geschwindigkeitsbegrenzungen (speed limits): warnung (warning): geschwindigkeitsüberschreitungen (over speeding)
