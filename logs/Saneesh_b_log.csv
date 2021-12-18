@@ -17,3 +17,4 @@ ST_018, Tire pressure monitoring, Yes, reifen (tire): verfügt (has): reifenvent
 CT_018, Tire pressure monitoring, No, 
 ST_019, Traktions steuersystem, Yes, accelerator-pedal: position: system: requirements: influence: engine: torque: cruise: control: active: safety: systems: electronic: stability: program
 CT_019, Traktions steuersystem, No, 
+ST_020, Traction control system, No, 
