@@ -1,1 +1,21 @@
 q_id, query, is_relevant, rel_words
+ST_001, ignition interlock devices, No, 
+CT_001, ignition interlock devices, No, 
+ST_002, Zündschloss geräte, Yes, immobilizer: vehicle: theft: transponder: ignition: key: intelligent: communications: interface: using: antenna: valid: releases: engine: system: start
+CT_002, Zündschloss geräte, No, 
+ST_003, Anti lock braking system, Yes, antiblockiersystem (antiblocking system): abs: verhindert (prevents): räder (wheels): sicheres (safe): bremsen (braking)
+CT_003, Anti lock braking system, Yes, antiblockiersystem (anti-lock braking system): hilft (helps): sicheren (safe): bremsen (braking): verkürzte (shortened): bremswege (braking distances): verringerte (reduced): sturzgefahr (risk of falling): abrupten (abrupt): bremsmanövern (braking maneuvers)
+ST_004, Automotive night vision, Yes, kamera (camera): oberseite (top): windschutzscheibe (windshield): lichtquellen (light sources): erkennen (detect): system: wechselt (changes): automatisch (automatically): abblend- (low beam): fernlicht (high beam): lichtverhältnissen (lighting conditions): fahrzeugen (vehicles): anzupassen (adapt): nutzungsdauer (service life): fernlichtes (high beam): optimieren (optimize): maximale (maximum): sicherheit (safety)
+CT_004, Automotive night vision, No, 
+ST_005, Nachtsicht im Auto, No, 
+CT_005, Nachtsicht im Auto, No, 
+ST_006, Blind spot monitor, No, 
+CT_006, Blind spot monitor, Yes, totwinkelwarner (blind spot warning): erkennt (detects): schlecht (bad): einsehbaren (visible): bereichen (areas): warnt (warns): gefahr (danger): optischen (optical)
+ST_007, Toter Winkel Monitor, No, autonomous: driving: mode: activated: set: sensors: monitor: road: provide: 360° (360 °): surveillance: vehicle: lidars: long-range: laser: scanners: frontal: radar: medium-range: corner: digital: cameras: four: 180° (180 °): ultrasound: belt
+CT_007, Toter Winkel Monitor, No, 
+ST_008, Collision avoidance system, Yes, automated: valet: fahrzeughersteller (vehicle manufacturer): automatisierte (automated): fahrerlebnis (driving experience): system: infrastruktur (infrastructure): eingesetzte (deployed): sensorik (sensors): fußgänger (pedestrians): objekte (objects): erkennt (detects): fahrzeug (vehicle): hindernis (obstacle)
+CT_008, Collision avoidance system, Yes, anfahrinformationssystem (approach information system): kollisionen (collisions): nutzfahrzeugen (commercial vehicles): verkehrsteilnehmern (road users): unmittelbar (immediate): kraftfahrzeug (motor vehicle): vermeiden (avoid)
+ST_009, Kollisionsvermeidungs system, Yes, automatic: emergency: braking: cyclists: car: warning: predictive: pedestrian: protection: driver: assistance: complex: urban: traffic: scenarios: protect: pedestrians
+CT_009, Kollisionsvermeidungs system, Yes, intelligent: forward: collision: warning: system: radar: sensor: located: front: vehicle: detect: distances: cars: well: relative: speed: allows: assess: situation: determines: slow: sudden: change: vehicles: driver: blinking: detection: sounding
+ST_010, Driver drowsiness detection, Yes, fahrerbeobachtungskamera (driver observation camera): erfasst (recorded): aufmerksamkeit (attention): sowie (as well as): zustand (condition): fahrers (driver): ablenkung (distraction): müdigkeit (tiredness): sekundenschlaf (second sleep): fahrer (driver): gewarnt (warned)
+CT_010, Driver drowsiness detection, Yes, fahrermüdigkeitserkennung (driver drowsiness detection): hilft (helps): müdigkeitsbedingte (drowsiness-related): unfälle (accidents): fahrer (driver): empfiehlt (recommends)
