@@ -1,6 +1,10 @@
 import pandas as pd
 from os import walk
 import numpy as np
+import re
+import sys
+sys.path.append('../')
+from util import util
 
 class EvaluateExplanations:
     def __init__(self, path) -> None:
@@ -10,19 +14,8 @@ class EvaluateExplanations:
         valid = [self.check_if_valid_log(df) for df in dfs]
         self.dfs = self.filter_dfs(dfs, valid)
 
-        self.init_per_query_counts()
-        self.acc = [self.get_accuracy(df) for df in self.dfs]
-        # total counts just take the sum total of Yes and No responses
-        self.get_total_counts()
-        # since user reponses vary significantly, it is better to consider the
-        # majority of response for each query.
-        # ST_IDX --> Yes if majority of users marked Yes, else No
-        # Similarly for CT_IDX
-        # This is calculated with majority counts
-        self.report_majority_counts()
-
-        print("Total counts", self.get_accuracy_values(self.total_counts))
-        print("Majority counts", self.get_accuracy_values(self.majority_counts))
+        self.sys_gen_words = util.decompress_pickle('sys_gen_words')
+        self.all_words = util.decompress_pickle('all_words')
 
 
     @staticmethod
@@ -138,6 +131,110 @@ class EvaluateExplanations:
         }
         return acc
 
+    def get_metrics_for_all_queries(self, df):
+        prec_st, recall_st, f_score_st = 0, 0, 0
+        prec_ct, recall_ct, f_score_ct = 0, 0, 0
+        count = 0
+        for _, row in df.iterrows():
+            q_id = row['q_id'].strip()
+            query_text = row['query_text'].strip()
+            is_relevant = row['is_relevant'].strip()
+            relevant_words = row['relevant_words'].strip()
+
+            if is_relevant == 'Yes':
+                count += 1
+                words = relevant_words.split(":")
+                words = [re.sub("\(.*\)", "", word) for word in words]
+                words = [word.strip() for word in words]
+                metrics = self.get_metrics_per_query(user_words=words,
+                                                sys_words=self.sys_gen_words[q_id],
+                                                all_words=self.all_words[q_id])
+                
+                if "ST_" in q_id:
+                    prec_st += metrics['prec']
+                    recall_st += metrics['recall']
+                    f_score_st += metrics['f_score']
+                else:
+                    prec_ct += metrics['prec']
+                    recall_ct += metrics['recall']
+                    f_score_ct += metrics['f_score']                
+                
+        try:
+            macro_prec_st = prec_st/count
+            macro_recall_st = recall_st/count
+            macro_f_score_st = f_score_st/count
+            
+            macro_prec_ct = prec_ct/count
+            macro_recall_ct = recall_ct/count
+            macro_f_score_ct = f_score_ct/count        
+        except:
+            macro_prec_st, macro_recall_st, macro_f_score_st = 0, 0, 0
+            macro_prec_ct, macro_recall_ct, macro_f_score_ct = 0, 0, 0
+            print("Count is zero. No row marked relevant. Cross-check!")
+        
+        metrics = {
+            "static":
+            {
+                "prec": macro_prec_st, 
+                "recall": macro_recall_st, 
+                "f_score": macro_f_score_st
+            },
+            "contextual":
+            {
+                "prec": macro_prec_ct, 
+                "recall": macro_recall_ct, 
+                "f_score": macro_f_score_ct
+            }
+
+        }
+        print(metrics)
+        return metrics
+
+    @staticmethod
+    def get_metrics_per_query(user_words, sys_words, all_words):
+        tp, tn, fp, fn = 0, 0, 0, 0
+        for word in all_words:
+            if word in user_words and word in sys_words:
+                tp += 1
+            if word not in user_words and word not in sys_words:
+                tn += 1
+            if word in user_words and word not in sys_words:
+                fn += 1
+            if word not in user_words and word in sys_words:
+                fp += 1
+        
+        prec, recall, f_score = 0, 0, 0
+        if tp+fp:
+            prec = tp/(tp+fp)
+        if tp+fn:
+            recall = tp/(tp+fn)
+        if prec+recall:
+            f_score = 2*((prec*recall)/(prec+recall))
+
+        metrics = {
+            "prec": prec,
+            "recall": recall,
+            "f_score": f_score
+        }
+        return metrics
+
 if __name__ == '__main__':
     eval = EvaluateExplanations(path="/home/sudhi/thesis/cltr_web_app/logs")
+
+    # EVAL 01 - Static or Contextual? Which gives better results?
+    eval.init_per_query_counts()
+    eval.acc = [eval.get_accuracy(df) for df in eval.dfs]
+    # total counts just take the sum total of Yes and No responses
+    eval.get_total_counts()
+    # since user reponses vary significantly, it is better to consider the
+    # majority of response for each query.
+    # ST_IDX --> Yes if majority of users marked Yes, else No
+    # Similarly for CT_IDX
+    # This is calculated with majority counts
+    eval.report_majority_counts()
+    print("Total counts", eval.get_accuracy_values(eval.total_counts))
+    print("Majority counts", eval.get_accuracy_values(eval.majority_counts))    
     
+    # EVAL 02 - Static or Contextual? Which gives better explanations?
+    for df in eval.dfs:
+        eval.get_metrics_for_all_queries(df)
