@@ -1,21 +1,4 @@
 q_id, query, is_relevant, rel_words
 ST_011, Müdigkeitserkennung des Fahrers, Yes, driver: monitoring: camera: monitors: alertness: condition: detect: distraction: drowsiness: microsleeps: alert: time
-CT_011, Müdigkeitserkennung des Fahrers, No, driver: drowsiness: detection: successful: market: years: already: pure: software: solution: without: need: additional: sensors: steering-angle: sensor: thus: easily: integrated: existing: vehicle: platforms: function: suitable: meet: emerging: legal: requirements
-ST_012, Hill descent control, No, 
-CT_012, Hill descent control, No, 
-ST_013, Bergabfahr kontrolle, Yes, precise: inertial: measurement: sensors: provide: reliable: data: functions: chassis: controllers: electronic: braking: systems
-CT_013, Bergabfahr kontrolle, No, 
-ST_014, Intelligent speed adaptation, Yes, leistungsfähigkeit (performance): verkehrszeicheninformation (traffic sign information): zusätzlich (additional): optimiert (optimized): unterstützt (supported): system: künftigen (future): gesetzlichen (legal): anforderungen (requirements): general: safety: regulation: gsr: intelligent: speed: limit: assist: erkennung (detection): geschwindigkeitsbegrenzungen (speed limits): warnung (warning): geschwindigkeitsüberschreitungen (over speeding)
-CT_014, Intelligent speed adaptation, Yes, adaptive: abstands- (distance control): geschwindigkeitsregelung (speed control): passt (fits): geschwindigkeit (speed): verkehrsfluss (traffic flow)
-ST_015, Intelligente Geschwindigkeitsanpassung, Yes, detection: implicit: explicit: speed: limitation: signs: inform: driver: maximum: allowed: velocity: includes: conditional: limits: supplementary: sign: optical: character: reading: optionally: extended: intelligent: assist: adapting: cruise: control: limit: information: traffic: recognition
-CT_015, Intelligente Geschwindigkeitsanpassung, Yes, intelligent: speed: assistance: system: designed: assist: driver: maintaining: matches: road: conditions: providing: targeted: appropriate: feedback
-ST_016, Spur zentrierung, No, circular: area: includes: parking: meeting: room: run-up: acceleration: track: testing: used: braking: maneuvers: lane: changes: driving: circle: slalom: markings: provided: different: radii: addition: handling: course
-CT_016, Spur zentrierung, No, 
-ST_017, Spurwechsel assistenz, Yes, lane: departure: warning: uses: video: camera: detect: markings: ahead: vehicle: warns: driver: leaving
-CT_017, Spurwechsel assistenz, No, 
-ST_018, Tire pressure monitoring, Yes, reifen (tire): verfügt (has): reifenventil (tire valve): sensor: fahrt (drive): regelmäßig (regularly)
-CT_018, Tire pressure monitoring, No, 
-ST_019, Traktions steuersystem, Yes, accelerator-pedal: position: system: requirements: influence: engine: torque: cruise: control: active: safety: systems: electronic: stability: program
-CT_019, Traktions steuersystem, No, 
-ST_020, Traction control system, No, 
-CT_020, Traction control system, No, 
+CT_011, Müdigkeitserkennung des Fahrers, Yes, driver: drowsiness: detection: successful: market: years: already: pure: software: solution: without: need: additional: sensors: steering-angle: sensor: thus: easily: integrated: existing: vehicle: platforms: function: suitable: meet: emerging: legal: requirements
+ST_012, Hill descent control, Yes, acc: lässt (lets): ab (from): geschwindigkeit (speed): etwa (about): stundenkilometern (hourly kilometers): aktivieren (activate): unterstützt (assisted): fahrer (driver): überlandfahrten (overland drives): autobahn: variante (variant): stop: go: geschwindigkeiten (speeds): stundenkilometer (kilometers per hour): aktiv (active): gewählten (selected): abstand (distance): vorausfahrenden (ahead): fahrzeug (vehicle): niedriger (lower): einhalten (keep): selbsttätig (automatic): stillstand (standstill): abbremsen (slow down): weise (wise): dichtem (dense): verkehr (traffic): stau (traffic jam): entlasten (relieve)
