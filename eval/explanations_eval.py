@@ -170,7 +170,7 @@ class EvaluateExplanations:
         except:
             macro_prec_st, macro_recall_st, macro_f_score_st = 0, 0, 0
             macro_prec_ct, macro_recall_ct, macro_f_score_ct = 0, 0, 0
-            print("Count is zero. No row marked relevant. Cross-check!")
+            # print("Count is zero. No row marked relevant. Cross-check!")
         
         metrics = {
             "static":
@@ -187,7 +187,6 @@ class EvaluateExplanations:
             }
 
         }
-        print(metrics)
         return metrics
 
     @staticmethod
@@ -218,6 +217,48 @@ class EvaluateExplanations:
         }
         return metrics
 
+    def get_macro_averaged_metrics(self):
+        macro_prec_st, macro_recall_st, macro_f_score_st = 0, 0, 0
+        macro_prec_ct, macro_recall_ct, macro_f_score_ct = 0, 0, 0
+
+        for df in self.dfs:
+            metrics = self.get_metrics_for_all_queries(df)
+            macro_prec_st += metrics['static']['prec']
+            macro_recall_st += metrics['static']['recall']
+            macro_f_score_st += metrics['static']['f_score']
+
+            macro_prec_ct += metrics['contextual']['prec']
+            macro_recall_ct += metrics['contextual']['recall']
+            macro_f_score_ct += metrics['contextual']['f_score']            
+
+        avg = lambda metric: metric/len(self.dfs)
+        macro_prec_st = avg(macro_prec_st)
+        macro_recall_st = avg(macro_recall_st)
+        macro_f_score_st = avg(macro_f_score_st)
+
+        macro_prec_ct = avg(macro_prec_ct)
+        macro_recall_ct = avg(macro_recall_ct)
+        macro_f_score_ct = avg(macro_f_score_ct)        
+
+        metrics = {
+            "static":
+            {
+                "prec": macro_prec_st, 
+                "recall": macro_recall_st, 
+                "f_score": macro_f_score_st
+            },
+            "contextual":
+            {
+                "prec": macro_prec_ct, 
+                "recall": macro_recall_ct, 
+                "f_score": macro_f_score_ct
+            }
+        }
+
+        print(metrics)
+        return metrics
+        
+
 if __name__ == '__main__':
     eval = EvaluateExplanations(path="/home/sudhi/thesis/cltr_web_app/logs")
 
@@ -236,5 +277,4 @@ if __name__ == '__main__':
     print("Majority counts", eval.get_accuracy_values(eval.majority_counts))    
     
     # EVAL 02 - Static or Contextual? Which gives better explanations?
-    for df in eval.dfs:
-        eval.get_metrics_for_all_queries(df)
+    print("Macro-averaged metrics", eval.get_macro_averaged_metrics())
