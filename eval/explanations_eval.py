@@ -5,6 +5,8 @@ import re
 import sys
 sys.path.append('../')
 from util import util
+import pprint
+pp = pprint.PrettyPrinter(indent=4)
 
 class EvaluateExplanations:
     def __init__(self, path) -> None:
@@ -98,6 +100,9 @@ class EvaluateExplanations:
         }
     
     def init_per_query_counts(self):
+        """
+        0 --> no, 1 --> yes
+        """
         self.st_queries_counts = {"ST_{:>03}".format(id):[0,0] for id in range(1, 31)}
         self.ct_queries_counts = {"CT_{:>03}".format(id):[0,0] for id in range(1, 31)} 
 
@@ -112,9 +117,9 @@ class EvaluateExplanations:
                 st_yes += 1
 
             if ct[0] > ct[1]:
-                ct_yes += 1
-            else:
                 ct_no += 1
+            else:
+                ct_yes += 1
 
         self.majority_counts = {
             "st_yes": st_yes,
@@ -130,6 +135,13 @@ class EvaluateExplanations:
             "ct_acc": counts['ct_yes'] / (counts['ct_yes'] + counts['ct_no'])
         }
         return acc
+
+    @staticmethod
+    def clean_user_relevant_words(relevant_words):
+        words = relevant_words.split(":")
+        words = [re.sub("\(.*\)", "", word) for word in words]
+        words = [word.strip() for word in words]
+        return words
 
     def get_metrics_for_all_queries(self, df):
         prec_st, recall_st, f_score_st = 0, 0, 0
@@ -255,7 +267,6 @@ class EvaluateExplanations:
             }
         }
 
-        print(metrics)
         return metrics
         
 
@@ -273,8 +284,11 @@ if __name__ == '__main__':
     # Similarly for CT_IDX
     # This is calculated with majority counts
     eval.report_majority_counts()
-    print("Total counts", eval.get_accuracy_values(eval.total_counts))
-    print("Majority counts", eval.get_accuracy_values(eval.majority_counts))    
+    print("Total counts")
+    pp.pprint(eval.get_accuracy_values(eval.total_counts))
+    print("Majority counts")
+    pp.pprint(eval.get_accuracy_values(eval.majority_counts))    
     
     # EVAL 02 - Static or Contextual? Which gives better explanations?
-    print("Macro-averaged metrics", eval.get_macro_averaged_metrics())
+    print("Macro-averaged metrics")
+    pp.pprint(eval.get_macro_averaged_metrics())
