@@ -53,7 +53,7 @@ def page_home():
         
     st.write('### Enter the query')       
     
-    query = st.text_input(label='Enter the query and type Ctrl+Enter to search',
+    query = st.text_input(label='Enter the query and press Enter to search',
                          value=query_text)
     
     if query != '':
@@ -95,7 +95,7 @@ def page_home():
 
         retrieved = util.decompress_pickle(f"dump/{query_us}_retrieved")
 
-        st.write('### Search results for "%s" in %f microseconds'%(query, difference.microseconds))
+        # st.write('### Search results for "%s" in %f microseconds'%(query, difference.microseconds))
 
         token_importance_en = util.decompress_pickle(f"dump/{query_us}_token_importance_en")         
         token_importance_de = util.decompress_pickle(f"dump/{query_us}_token_importance_de")                       
@@ -111,11 +111,26 @@ def page_home():
 
         st.session_state['app_state'] = app_state
 
-        with st.expander("Explore representation space"):
+        with st.expander(f"Search results for '{query}'"):
+            display_search_results(cached_state, doc_lang='en')
+            display_search_results(cached_state, doc_lang='de')        
+
+        with st.expander("Explanation 01 - Why and Why not?"):
+            with st.container():
+                col1, col2, col3 = st.columns([10, 1, 30])
+                col1.markdown("<span class='heading'><b>Why and Why not?</b></span>", unsafe_allow_html=True)
+                col2.markdown("<div class= 'vertical'></div>", unsafe_allow_html=True)
+                col3.markdown("<p>The model learns a vector representation for the query and documents. You can think of them as 2-D points. The documents retrieved are closer to the query.</p>",
+                            unsafe_allow_html=True
+                            )                   
+                col3.markdown("<p>You can see below the representation space of the query and documents.</p>",
+                            unsafe_allow_html=True
+                            ) 
+
             repr_space = util.decompress_pickle(f"dump/{query_us}_repr_space")
             imp_word = util.decompress_pickle(f"dump/{query_us}_imp_word")
             text = f'\
-            You can see the representation space of the queries and documents below.<br>\
+            Hover through the documents to judge why a few documents are retrieved and a few are not.<br>\
             <span style="color: transparent;  text-shadow: 0 0 0 green; ">&#9899;</span> Query\
             <span style="color: transparent;  text-shadow: 0 0 0 red; ">&#9899;</span> Document <b>relevant</b> to the query <br>\
             <span style="color: transparent;  text-shadow: 0 0 0 blue; ">&#9899;</span> Document with word \
@@ -127,9 +142,7 @@ def page_home():
                 st.markdown('Sorry! Can not dsiplay the space', unsafe_allow_html=True)
             else:                   
                 st.plotly_chart(repr_space, use_container_width=True)
-
-        display_search_results(cached_state, doc_lang='en')
-        display_search_results(cached_state, doc_lang='de')
+            st.markdown('To further understand why each of the documents were retrieved, click X next to each document.', unsafe_allow_html=True)
 
     
 def display_search_results(cached_state, doc_lang):
@@ -191,11 +204,10 @@ def page_explanations():
     if doc in retrieved['de_docs']:
         doc_idx = retrieved['de_docs'].index(doc)
 
-    # st.markdown("<hr class='separator'>", unsafe_allow_html=True)
-    with st.expander('Explanation 02 - Query-Document terms co-occurrences'):
+    with st.expander('Explanation 02 - Co-occurrences'):
         with st.container():
             col1, col2, col3 = st.columns([10, 1, 30])
-            col1.markdown("<span class='heading'><b>Query-Document terms co-occurrences</b></span>", unsafe_allow_html=True)
+            col1.markdown("<span class='heading'><b>Co-occurrences</b></span>", unsafe_allow_html=True)
             col2.markdown("<div class= 'vertical'></div>", unsafe_allow_html=True)
             col3.markdown("<p>The model was trained on patents from the European Patent Office (EPO) belonging to the International Patent Classification (IPC) <i>B60 Vehicles in General</i>.</p>",
                         unsafe_allow_html=True
@@ -208,10 +220,10 @@ def page_explanations():
         st.plotly_chart(heatmap, use_container_width=True)        
 
     # st.markdown("<hr class='separator'>", unsafe_allow_html=True)
-    with st.expander('Explanation 03 - Query-Document term associations'):
+    with st.expander('Explanation 03 - Associations'):
         with st.container():
             col1, col2, col3 = st.columns([10, 1, 30])
-            col1.markdown("<span class='heading'><b>Query-Document term associations</b></span>", unsafe_allow_html=True)
+            col1.markdown("<span class='heading'><b>Associations</b></span>", unsafe_allow_html=True)
             col2.markdown("<div class= 'vertical'></div>", unsafe_allow_html=True)
             col3.markdown("<p>The model knows both English and German <i>reasonably well</i>. It can say which pair of words associate with one another.</p>",
                         unsafe_allow_html=True
@@ -236,11 +248,10 @@ def page_explanations():
                 with col_txt:
                     st.markdown(i['text'], unsafe_allow_html=True)        
 
-    # st.markdown("<hr class='separator'>", unsafe_allow_html=True)
-    with st.expander('Explanation 04 - Document term significance'):
+    with st.expander('Explanation 04 - Significance'):
         with st.container():
             col1, col2, col3 = st.columns([10, 1, 30])
-            col1.markdown("<span class='heading'><b>Document term significance</b></span>", unsafe_allow_html=True)
+            col1.markdown("<span class='heading'><b>Significance</b></span>", unsafe_allow_html=True)
             col2.markdown("<div class= 'vertical'></div>", unsafe_allow_html=True)
             col3.markdown("<p>Each document term contribute differently to the retrieval of this document. It can either prompt the system to retrieve the document or otherwise.</p>",
                         unsafe_allow_html=True
