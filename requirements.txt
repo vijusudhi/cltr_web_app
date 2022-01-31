@@ -1,5 +1,3 @@
 streamlit
-pandas
-openpyxl
 nltk
-pygithub
+numpy

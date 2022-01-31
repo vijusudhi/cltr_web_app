@@ -1,7 +1,5 @@
 from colour import Color
-# from util import tokenize, vectorize
 import re
-# import pandas as pd
 import numpy as np
 # import plotly.express as px
 

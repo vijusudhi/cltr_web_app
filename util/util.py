@@ -1,9 +1,5 @@
 import bz2
 import _pickle as cPickle
-from sklearn.linear_model import LogisticRegression
-from sklearn.feature_extraction.text import TfidfVectorizer
-from gensim.models import KeyedVectors
-
 
 # Pickle a file and then compress it into a file with extension 
 def compress_pickle(name, data):
