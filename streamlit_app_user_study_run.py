@@ -191,64 +191,67 @@ def page_explanations():
     if doc in retrieved['de_docs']:
         doc_idx = retrieved['de_docs'].index(doc)
 
-    st.markdown("<hr class='separator'>", unsafe_allow_html=True)
-    with st.container():
-        col1, col2, col3 = st.columns([10, 1, 30])
-        col1.markdown("<span class='heading'><b>Query-Document terms co-occurrences</b></span>", unsafe_allow_html=True)
-        col2.markdown("<div class= 'vertical'></div>", unsafe_allow_html=True)
-        col3.markdown("<p>The model was trained on patents from the European Patent Office (EPO) belonging to the International Patent Classification (IPC) <i>B60 Vehicles in General</i>.</p>",
-                     unsafe_allow_html=True
-                    )                   
-        col3.markdown("<p>You can see the query-document terms co-occurrences found the corpus below.</p>",
-                    unsafe_allow_html=True
-                    ) 
-
-    heatmap = util.decompress_pickle(f"dump/{query_us}_{doc_lang}_{doc_idx}_heatmap")
-    st.plotly_chart(heatmap, use_container_width=True)        
-
-    st.markdown("<hr class='separator'>", unsafe_allow_html=True)
-    with st.container():
-        col1, col2, col3 = st.columns([10, 1, 30])
-        col1.markdown("<span class='heading'><b>Query-Document term associations</b></span>", unsafe_allow_html=True)
-        col2.markdown("<div class= 'vertical'></div>", unsafe_allow_html=True)
-        col3.markdown("<p>The model knows both English and German <i>reasonably well</i>. It can say which pair of words associate with one another.</p>",
-                     unsafe_allow_html=True
-                    )
-        col3.markdown("<p>You can see below <span class='highlight darkbrown_bold'>high</span> to <span class='highlight lightbrown_bold'>low</span> associations of document terms with the query terms.</p>",
-                 unsafe_allow_html=True
-                )    
-
-    spit_imp = util.decompress_pickle(f"dump/{query_us}_{doc_lang}_{doc_idx}_spit_imp")   
-    st.markdown("<p></p>", unsafe_allow_html=True)   
-    with st.container():
-        col_q, col_txt = st.columns([5, 20])
-        col_q.markdown('*Query term*')
-        col_txt.markdown('*Document*')
-    for i in spit_imp:
+    # st.markdown("<hr class='separator'>", unsafe_allow_html=True)
+    with st.expander('Explanation 02 - Query-Document terms co-occurrences'):
         with st.container():
-            # TODO: update column width dynamically according to size
-            # of text
+            col1, col2, col3 = st.columns([10, 1, 30])
+            col1.markdown("<span class='heading'><b>Query-Document terms co-occurrences</b></span>", unsafe_allow_html=True)
+            col2.markdown("<div class= 'vertical'></div>", unsafe_allow_html=True)
+            col3.markdown("<p>The model was trained on patents from the European Patent Office (EPO) belonging to the International Patent Classification (IPC) <i>B60 Vehicles in General</i>.</p>",
+                        unsafe_allow_html=True
+                        )                   
+            col3.markdown("<p>You can see the query-document terms co-occurrences found the corpus below.</p>",
+                        unsafe_allow_html=True
+                        ) 
+
+        heatmap = util.decompress_pickle(f"dump/{query_us}_{doc_lang}_{doc_idx}_heatmap")
+        st.plotly_chart(heatmap, use_container_width=True)        
+
+    # st.markdown("<hr class='separator'>", unsafe_allow_html=True)
+    with st.expander('Explanation 03 - Query-Document term associations'):
+        with st.container():
+            col1, col2, col3 = st.columns([10, 1, 30])
+            col1.markdown("<span class='heading'><b>Query-Document term associations</b></span>", unsafe_allow_html=True)
+            col2.markdown("<div class= 'vertical'></div>", unsafe_allow_html=True)
+            col3.markdown("<p>The model knows both English and German <i>reasonably well</i>. It can say which pair of words associate with one another.</p>",
+                        unsafe_allow_html=True
+                        )
+            col3.markdown("<p>You can see below <span class='highlight darkbrown_bold'>high</span> to <span class='highlight lightbrown_bold'>low</span> associations of document terms with the query terms.</p>",
+                    unsafe_allow_html=True
+                    )    
+
+        spit_imp = util.decompress_pickle(f"dump/{query_us}_{doc_lang}_{doc_idx}_spit_imp")   
+        st.markdown("<p></p>", unsafe_allow_html=True)   
+        with st.container():
             col_q, col_txt = st.columns([5, 20])
-            with col_q:
-                st.markdown('**%s**' %i['split'])
-            with col_txt:
-                st.markdown(i['text'], unsafe_allow_html=True)        
+            col_q.markdown('*Query term*')
+            col_txt.markdown('*Document*')
+        for i in spit_imp:
+            with st.container():
+                # TODO: update column width dynamically according to size
+                # of text
+                col_q, col_txt = st.columns([5, 20])
+                with col_q:
+                    st.markdown('**%s**' %i['split'])
+                with col_txt:
+                    st.markdown(i['text'], unsafe_allow_html=True)        
 
-    st.markdown("<hr class='separator'>", unsafe_allow_html=True)
-    with st.container():
-        col1, col2, col3 = st.columns([10, 1, 30])
-        col1.markdown("<span class='heading'><b>Document term significance</b></span>", unsafe_allow_html=True)
-        col2.markdown("<div class= 'vertical'></div>", unsafe_allow_html=True)
-        col3.markdown("<p>Each document term contribute differently to the retrieval of this document. It can either prompt the system to retrieve the document or otherwise.</p>",
-                     unsafe_allow_html=True
-                    )
-        col3.markdown("<p> You can see below the <span class='highlight darkgreen_bold'>positive</span> or <span class='highlight darkred_bold'>negative</span> contribution of document terms to the retrieval.</p>",
-                 unsafe_allow_html=True
-                )                     
+    # st.markdown("<hr class='separator'>", unsafe_allow_html=True)
+    with st.expander('Explanation 04 - Document term significance'):
+        with st.container():
+            col1, col2, col3 = st.columns([10, 1, 30])
+            col1.markdown("<span class='heading'><b>Document term significance</b></span>", unsafe_allow_html=True)
+            col2.markdown("<div class= 'vertical'></div>", unsafe_allow_html=True)
+            col3.markdown("<p>Each document term contribute differently to the retrieval of this document. It can either prompt the system to retrieve the document or otherwise.</p>",
+                        unsafe_allow_html=True
+                        )
+            col3.markdown("<p> You can see below the <span class='highlight darkgreen_bold'>positive</span> or <span class='highlight darkred_bold'>negative</span> contribution of document terms to the retrieval.</p>",
+                    unsafe_allow_html=True
+                    )                     
 
-       
-    plt_imp = util.decompress_pickle(f"dump/{query_us}_{doc_lang}_{doc_idx}_plt_imp")
-    st.plotly_chart(plt_imp, use_container_width=True)                    
+        
+        plt_imp = util.decompress_pickle(f"dump/{query_us}_{doc_lang}_{doc_idx}_plt_imp")
+        st.plotly_chart(plt_imp, use_container_width=True)                    
     
     st.session_state["page"] = 'Home'
     st.button(label="Exit", key='626', on_click=update_and_exit)
