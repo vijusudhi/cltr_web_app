@@ -269,7 +269,8 @@ def page_explanations():
         text = f'\
         Hover through the documents to judge why a few documents are retrieved and a few are not.<br>\
         <span style="color: transparent;  text-shadow: 0 0 0 green; ">&#9899;</span> Query\
-        <span style="color: transparent;  text-shadow: 0 0 0 red; ">&#9899;</span> Document <b>relevant</b> to the query <br>\
+        <span style="color: transparent;  text-shadow: 0 0 0 red; ">&#9899;</span> Document <b>relevant</b> to the query\
+        (<span style="color: transparent;  text-shadow: 0 0 0 brown; ">&#9899;</span>if selected)<br>\
         <span style="color: transparent;  text-shadow: 0 0 0 blue; ">&#9899;</span> Document with word \
         <span class="highlight red">{imp_word}</span><b>not relevant</b> to the query<br>\
         Size of the markers indicate contextual similarity.\
