@@ -58,10 +58,12 @@ def page_home():
                'future of mobility',
               )
 
+    index = queries.index(query_text)
     st.write('### Pick a query')
     query = st.selectbox(
          '(This is a demo app with limited set of queries)',
-         queries)    
+         queries, index=index)    
+
     
     # query = st.text_input(label='Enter the query and press Enter to search',
     #                      value=query_text)
