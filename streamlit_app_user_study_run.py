@@ -51,17 +51,26 @@ def page_home():
     with st.spinner('Please wait while we load the environment..'):
         cached_state = load_states()
         
-    st.write('### Enter the query')       
+    queries = ('adaptive cruise control', 
+               'adaptiver Tempomat', 
+               'automatic emergency braking',
+               'future of mobility',
+              )
+
+    st.write('### Pick a query')
+    query = st.selectbox(
+         '(This is a demo app with limited set of queries)',
+         queries)    
     
-    query = st.text_input(label='Enter the query and press Enter to search',
-                         value=query_text)
+    # query = st.text_input(label='Enter the query and press Enter to search',
+    #                      value=query_text)
     
     if query != '':
         if query_text != query:
             query_lang_corrected = False
 
         query_us = re.sub(' ', '_', query) 
-        query_lang = 'en'
+        query_lang = util.decompress_pickle(f"dump/{query_us}/query_lang")
 
         with st.container():
             col1, col2 = st.columns([5, 5])
@@ -70,8 +79,9 @@ def page_home():
 
         now = datetime.datetime.now()   
 
-        suggestions = util.decompress_pickle(f"dump/{query_us}_suggestions")
-        st.write("### You may also search for")
+        suggestions = util.decompress_pickle(f"dump/{query_us}/suggestions")
+        st.markdown("<h3>You may <span class='heading'><b>also search for</b></span></h3>", unsafe_allow_html=True)
+        st.markdown(" ", unsafe_allow_html=True)
         with st.container():
             text = ""
             length = 0
@@ -93,12 +103,12 @@ def page_home():
         after = datetime.datetime.now()
         difference = after - now            
 
-        retrieved = util.decompress_pickle(f"dump/{query_us}_retrieved")
+        retrieved = util.decompress_pickle(f"dump/{query_us}/retrieved")
 
         # st.write('### Search results for "%s" in %f microseconds'%(query, difference.microseconds))
 
-        token_importance_en = util.decompress_pickle(f"dump/{query_us}_token_importance_en")         
-        token_importance_de = util.decompress_pickle(f"dump/{query_us}_token_importance_de")                       
+        token_importance_en = util.decompress_pickle(f"dump/{query_us}/token_importance_en")         
+        token_importance_de = util.decompress_pickle(f"dump/{query_us}/token_importance_de")                       
 
         app_state = states.AppState(
                                 query = query,
@@ -111,40 +121,11 @@ def page_home():
 
         st.session_state['app_state'] = app_state
 
-        with st.expander(f"Search results for '{query}'"):
-            display_search_results(cached_state, doc_lang='en')
-            display_search_results(cached_state, doc_lang='de')        
+        st.markdown("<h3>See the <span class='heading'><b>EN results</b></span> below</h3>", unsafe_allow_html=True)
+        display_search_results(cached_state, doc_lang='en')
+        st.markdown("<h3>See the <span class='heading'><b>DE results</b></span> below</h3>", unsafe_allow_html=True)
+        display_search_results(cached_state, doc_lang='de')        
 
-        with st.expander("Explanation 01 - Why and Why not?"):
-            with st.container():
-                col1, col2, col3 = st.columns([10, 1, 30])
-                col1.markdown("<span class='heading'><b>Why and Why not?</b></span>", unsafe_allow_html=True)
-                col2.markdown("<div class= 'vertical'></div>", unsafe_allow_html=True)
-                col3.markdown("<p>The model learns a vector representation for the query and documents. You can think of them as 2-D points. The documents retrieved are closer to the query.</p>",
-                            unsafe_allow_html=True
-                            )                   
-                col3.markdown("<p>You can see below the representation space of the query and documents.</p>",
-                            unsafe_allow_html=True
-                            ) 
-
-            repr_space = util.decompress_pickle(f"dump/{query_us}_repr_space")
-            imp_word = util.decompress_pickle(f"dump/{query_us}_imp_word")
-            text = f'\
-            Hover through the documents to judge why a few documents are retrieved and a few are not.<br>\
-            <span style="color: transparent;  text-shadow: 0 0 0 green; ">&#9899;</span> Query\
-            <span style="color: transparent;  text-shadow: 0 0 0 red; ">&#9899;</span> Document <b>relevant</b> to the query <br>\
-            <span style="color: transparent;  text-shadow: 0 0 0 blue; ">&#9899;</span> Document with word \
-            <span class="highlight red">{imp_word}</span><b>not relevant</b> to the query<br>\
-            Size of the markers indicate contextual similarity.\
-            '
-            st.markdown(text, unsafe_allow_html=True)
-            if repr_space == -1:
-                st.markdown('Sorry! Can not dsiplay the space', unsafe_allow_html=True)
-            else:                   
-                st.plotly_chart(repr_space, use_container_width=True)
-            st.markdown('To further understand why each of the documents were retrieved, click X next to each document.', unsafe_allow_html=True)
-
-    
 def display_search_results(cached_state, doc_lang):
     if doc_lang == 'en':
         sim = st.session_state['app_state'].retrieved['en_sim']
@@ -195,18 +176,23 @@ def page_explanations():
         col1, col2 = st.columns([5, 20])
         col1.markdown("Document")
         col2.markdown(f"**{doc}**", unsafe_allow_html=True)
+
+    with st.expander('How do we explain?'):
+        _, im, _ = st.columns([5, 10, 5])
+        im.image('data/overall.png', width=250)
     
     query_us = re.sub(' ', '_', query)
-    retrieved = util.decompress_pickle(f"dump/{query_us}_retrieved")
+    retrieved = util.decompress_pickle(f"dump/{query_us}/retrieved")
 
     if doc in retrieved['en_docs']:
         doc_idx = retrieved['en_docs'].index(doc)
     if doc in retrieved['de_docs']:
         doc_idx = retrieved['de_docs'].index(doc)
 
-    with st.expander('Explanation 02 - Co-occurrences'):
+    with st.expander('Explanation 01 - Co-occurrences'):
         with st.container():
-            col1, col2, col3 = st.columns([10, 1, 30])
+            im, col1, col2, col3 = st.columns([3, 5, 1, 20])
+            im.image('data/exp01.png', width=50, use_column_width=True)
             col1.markdown("<span class='heading'><b>Co-occurrences</b></span>", unsafe_allow_html=True)
             col2.markdown("<div class= 'vertical'></div>", unsafe_allow_html=True)
             col3.markdown("<p>The model was trained on patents from the European Patent Office (EPO) belonging to the International Patent Classification (IPC) <i>B60 Vehicles in General</i>.</p>",
@@ -216,13 +202,13 @@ def page_explanations():
                         unsafe_allow_html=True
                         ) 
 
-        heatmap = util.decompress_pickle(f"dump/{query_us}_{doc_lang}_{doc_idx}_heatmap")
+        heatmap = util.decompress_pickle(f"dump/{query_us}/{doc_lang}_{doc_idx}_heatmap")
         st.plotly_chart(heatmap, use_container_width=True)        
 
-    # st.markdown("<hr class='separator'>", unsafe_allow_html=True)
-    with st.expander('Explanation 03 - Associations'):
+    with st.expander('Explanation 02 - Associations'):
         with st.container():
-            col1, col2, col3 = st.columns([10, 1, 30])
+            im, col1, col2, col3 = st.columns([3, 5, 1, 20])
+            im.image('data/exp02.png', width=50)
             col1.markdown("<span class='heading'><b>Associations</b></span>", unsafe_allow_html=True)
             col2.markdown("<div class= 'vertical'></div>", unsafe_allow_html=True)
             col3.markdown("<p>The model knows both English and German <i>reasonably well</i>. It can say which pair of words associate with one another.</p>",
@@ -232,7 +218,7 @@ def page_explanations():
                     unsafe_allow_html=True
                     )    
 
-        spit_imp = util.decompress_pickle(f"dump/{query_us}_{doc_lang}_{doc_idx}_spit_imp")   
+        spit_imp = util.decompress_pickle(f"dump/{query_us}/{doc_lang}_{doc_idx}_spit_imp")   
         st.markdown("<p></p>", unsafe_allow_html=True)   
         with st.container():
             col_q, col_txt = st.columns([5, 20])
@@ -248,9 +234,10 @@ def page_explanations():
                 with col_txt:
                     st.markdown(i['text'], unsafe_allow_html=True)        
 
-    with st.expander('Explanation 04 - Significance'):
+    with st.expander('Explanation 03 - Significance'):
         with st.container():
-            col1, col2, col3 = st.columns([10, 1, 30])
+            im, col1, col2, col3 = st.columns([3, 5, 1, 20])
+            im.image('data/exp03.png', width=50)
             col1.markdown("<span class='heading'><b>Significance</b></span>", unsafe_allow_html=True)
             col2.markdown("<div class= 'vertical'></div>", unsafe_allow_html=True)
             col3.markdown("<p>Each document term contribute differently to the retrieval of this document. It can either prompt the system to retrieve the document or otherwise.</p>",
@@ -261,8 +248,36 @@ def page_explanations():
                     )                     
 
         
-        plt_imp = util.decompress_pickle(f"dump/{query_us}_{doc_lang}_{doc_idx}_plt_imp")
-        st.plotly_chart(plt_imp, use_container_width=True)                    
+        plt_imp = util.decompress_pickle(f"dump/{query_us}/{doc_lang}_{doc_idx}_plt_imp")
+        st.plotly_chart(plt_imp, use_container_width=True)
+
+    with st.expander("Explanation 04 - Why and Why not?"):
+        with st.container():
+            im, col1, col2, col3 = st.columns([3, 5, 1, 20])
+            im.image('data/exp04.png', width=45)
+            col1.markdown("<span class='heading'><b>Why and Why not?</b></span>", unsafe_allow_html=True)
+            col2.markdown("<div class= 'vertical'></div>", unsafe_allow_html=True)
+            col3.markdown("<p>The model learns a vector representation for the query and documents. You can think of them as 2-D points. The documents retrieved are closer to the query.</p>",
+                        unsafe_allow_html=True
+                        )                   
+            col3.markdown("<p>You can see below the representation space of the query and documents.</p>",
+                        unsafe_allow_html=True
+                        )
+        repr_space = util.decompress_pickle(f"dump/{query_us}/{doc_lang}_{doc_idx}_repr_space")
+        imp_word = util.decompress_pickle(f"dump/{query_us}/{doc_lang}_{doc_idx}_imp_word")
+        text = f'\
+        Hover through the documents to judge why a few documents are retrieved and a few are not.<br>\
+        <span style="color: transparent;  text-shadow: 0 0 0 green; ">&#9899;</span> Query\
+        <span style="color: transparent;  text-shadow: 0 0 0 red; ">&#9899;</span> Document <b>relevant</b> to the query <br>\
+        <span style="color: transparent;  text-shadow: 0 0 0 blue; ">&#9899;</span> Document with word \
+        <span class="highlight red">{imp_word}</span><b>not relevant</b> to the query<br>\
+        Size of the markers indicate contextual similarity.\
+        '
+        st.markdown(text, unsafe_allow_html=True)
+        if repr_space == -1:
+            st.markdown('Sorry! Can not dsiplay the space', unsafe_allow_html=True)
+        else:                   
+            st.plotly_chart(repr_space, use_container_width=True)                            
     
     st.session_state["page"] = 'Home'
     st.button(label="Exit", key='626', on_click=update_and_exit)
