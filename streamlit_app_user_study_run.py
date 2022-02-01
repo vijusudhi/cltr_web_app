@@ -51,7 +51,8 @@ def page_home():
     with st.spinner('Please wait while we load the environment..'):
         cached_state = load_states()
         
-    queries = ('adaptive cruise control', 
+    queries = ('',
+               'adaptive cruise control', 
                'adaptiver Tempomat', 
                'automatic emergency braking',
                'future of mobility',
