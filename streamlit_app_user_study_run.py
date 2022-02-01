@@ -61,7 +61,7 @@ def page_home():
     index = queries.index(query_text)
     st.write('### Pick a query')
     query = st.selectbox(
-         '(This is a demo app with limited set of queries)',
+         '(This is a demo app with a limited set of queries)',
          queries, index=index)    
 
     
