@@ -125,8 +125,10 @@ def page_home():
         st.session_state['app_state'] = app_state
 
         st.markdown("<h3>See the <span class='heading'><b>EN results</b></span> below</h3>", unsafe_allow_html=True)
+        st.markdown(" ", unsafe_allow_html=True)
         display_search_results(cached_state, doc_lang='en')
         st.markdown("<h3>See the <span class='heading'><b>DE results</b></span> below</h3>", unsafe_allow_html=True)
+        st.markdown(" ", unsafe_allow_html=True)
         display_search_results(cached_state, doc_lang='de')        
 
 def display_search_results(cached_state, doc_lang):
@@ -141,6 +143,7 @@ def display_search_results(cached_state, doc_lang):
         token_imp = st.session_state['app_state'].token_importance_de
         key_ind = 100
     
+    idx = 1
     for sim, doc in zip(sim, docs):
         html_string = explain_cont.get_display_text(doc, token_imp, mode='bold')
         url, title = explain_cont.get_url(cached_state.scraped_df, doc)
@@ -158,8 +161,9 @@ def display_search_results(cached_state, doc_lang):
                                   )
                 key_ind += 1
             with mid:
-                st.markdown('[%s](%s)'%(title, url))    
+                st.markdown(f'<span class="highlight red_bold">Result {idx}</span> [{title}]({url})', unsafe_allow_html=True)    
                 st.markdown(html_string, unsafe_allow_html=True)
+        idx += 1
     
 def update_and_explain(explain_state):
     st.session_state["page"] = 'Explanations'
@@ -214,7 +218,7 @@ def page_explanations():
             im.image('data/exp02.png', width=50)
             col1.markdown("<span class='heading'><b>Associations</b></span>", unsafe_allow_html=True)
             col2.markdown("<div class= 'vertical'></div>", unsafe_allow_html=True)
-            col3.markdown("<p>The model knows both English and German <i>reasonably well</i>. It can say which pair of words associate with one another.</p>",
+            col3.markdown("<p>The model knows both English and German <i>reasonably well</i>. It can say which pairs of words associate with one another.</p>",
                         unsafe_allow_html=True
                         )
             col3.markdown("<p>You can see below <span class='highlight darkbrown_bold'>high</span> to <span class='highlight lightbrown_bold'>low</span> associations of document terms with the query terms.</p>",
@@ -243,7 +247,7 @@ def page_explanations():
             im.image('data/exp03.png', width=50)
             col1.markdown("<span class='heading'><b>Significance</b></span>", unsafe_allow_html=True)
             col2.markdown("<div class= 'vertical'></div>", unsafe_allow_html=True)
-            col3.markdown("<p>Each document term contribute differently to the retrieval of this document. It can either prompt the system to retrieve the document or otherwise.</p>",
+            col3.markdown("<p>Each document term contributes differently to the retrieval of this document. It can either prompt the system to retrieve the document or otherwise.</p>",
                         unsafe_allow_html=True
                         )
             col3.markdown("<p> You can see below the <span class='highlight darkgreen_bold'>positive</span> or <span class='highlight darkred_bold'>negative</span> contribution of document terms to the retrieval.</p>",
