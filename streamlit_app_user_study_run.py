@@ -54,8 +54,8 @@ def page_home():
     queries = ('',
                'adaptive cruise control', 
                'adaptiver Tempomat', 
-               'automatic emergency braking',
                'future of mobility',
+               'Zukunft der Mobilität',
               )
 
     index = queries.index(query_text)
@@ -155,13 +155,15 @@ def display_search_results(cached_state, doc_lang):
                                 sim=sim
                             )
             with col1:
-                st.button(label="X", key='%d'%key_ind, 
+                st.button(label="?", key='%d'%key_ind, 
                                    on_click=update_and_explain,
                                    args=(explain_state,)
                                   )
                 key_ind += 1
             with mid:
-                st.markdown(f'<span class="highlight red_bold">Result {idx}</span> [{title}]({url})', unsafe_allow_html=True)    
+                st.markdown(f'<span class="highlight red_bold">Result {idx}</span> [{title}]({url})', unsafe_allow_html=True)
+                html_string = re.sub("<b>", "", html_string)
+                html_string = re.sub("</b>", "", html_string)
                 st.markdown(html_string, unsafe_allow_html=True)
         idx += 1
     
