@@ -266,10 +266,10 @@ def page_explanations():
             im.image('data/exp04.png', width=45)
             col1.markdown("<span class='heading'><b>Why and Why not?</b></span>", unsafe_allow_html=True)
             col2.markdown("<div class= 'vertical'></div>", unsafe_allow_html=True)
-            col3.markdown("<p>The model learns a vector representation for the query and documents. You can think of them as 2-D points. The documents retrieved are closer to the query.</p>",
+            col3.markdown("<p>The model learns a high-dimensional vector representation for the query and documents. The documents retrieved are closer to the query.</p>",
                         unsafe_allow_html=True
                         )                   
-            col3.markdown("<p>You can see below the representation space of the query and documents.</p>",
+            col3.markdown("<p>You can see below one of the possible 2-D projections of the high-dimensional representation space.</p>",
                         unsafe_allow_html=True
                         )
         repr_space = util.decompress_pickle(f"dump/{query_us}/{doc_lang}_{doc_idx}_repr_space")
@@ -278,7 +278,7 @@ def page_explanations():
         Hover through the documents to judge why a few documents are retrieved and a few are not.<br>\
         <span style="color: transparent;  text-shadow: 0 0 0 green; ">&#9899;</span> Query\
         <span style="color: transparent;  text-shadow: 0 0 0 red; ">&#9899;</span> Document <b>relevant</b> to the query\
-        (<span style="color: transparent;  text-shadow: 0 0 0 brown; ">&#9899;</span>if selected)<br>\
+        (<span style="color: transparent;  text-shadow: 0 0 0 #A95C68; ">&#9899;</span>if selected)<br>\
         <span style="color: transparent;  text-shadow: 0 0 0 blue; ">&#9899;</span> Document with word \
         <span class="highlight red">{imp_word}</span><b>not relevant</b> to the query<br>\
         Size of the markers indicate contextual similarity.\
