@@ -2,7 +2,6 @@ import streamlit as st
 import datetime
 import re
 from util import util, explain_cont, states
-from nltk.tokenize import sent_tokenize
 
 NUM_RETRIEVAL = 5
 
@@ -164,7 +163,7 @@ def display_search_results(cached_state, doc_lang):
                 st.markdown(f'[{title}]({url})', unsafe_allow_html=True)
                 html_string = re.sub("<b>", "", html_string)
                 html_string = re.sub("</b>", "", html_string)
-                st.markdown(sent_tokenize(html_string)[0], unsafe_allow_html=True)
+                st.markdown(html_string, unsafe_allow_html=True)
         idx += 1
     
 def update_and_explain(explain_state):
