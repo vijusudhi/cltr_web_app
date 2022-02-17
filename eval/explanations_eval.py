@@ -49,6 +49,7 @@ class EvaluateExplanations:
         checks the logs path and returns only the csv files
         """
         _, _, filenames = next(walk(self.path))
+        print(filenames)
         filenames = [f"{self.path}/{filename}" for filename in filenames if "csv" in filename]
         return filenames
 
@@ -271,7 +272,7 @@ class EvaluateExplanations:
         
 
 if __name__ == '__main__':
-    eval = EvaluateExplanations(path="/home/sudhi/thesis/cltr_web_app/logs")
+    eval = EvaluateExplanations(path=r"D:\master_thesis_viju\cltr_web_app\logs")
 
     # EVAL 01 - Static or Contextual? Which gives better results?
     eval.init_per_query_counts()
