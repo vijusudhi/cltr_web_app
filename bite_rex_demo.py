@@ -11,6 +11,9 @@ def local_css(file_name):
 
 local_css("css/style.css") 
 
+st.beta_set_page_config(page_title='🦖 BiTe-REx: Retrieve and Explain!', page_icon = favicon, layout = 'centered', initial_sidebar_state = 'collapsed')
+
+
 @st.cache(allow_output_mutation=True)
 def load_states():
     scraped_df = util.decompress_pickle('data/scraped_df')
