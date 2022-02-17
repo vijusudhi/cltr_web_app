@@ -1,4 +1,7 @@
 import streamlit as st
+st.set_page_config(page_title='BiTe-REx: Retrieve and Explain!', page_icon = "🦖", layout = 'centered', initial_sidebar_state = 'collapsed')
+
+
 import datetime
 import re
 from util import util, explain_cont, states
@@ -11,7 +14,6 @@ def local_css(file_name):
 
 local_css("css/style.css") 
 
-st.beta_set_page_config(page_title='🦖 BiTe-REx: Retrieve and Explain!', page_icon = favicon, layout = 'centered', initial_sidebar_state = 'collapsed')
 
 
 @st.cache(allow_output_mutation=True)
